@@ -1,149 +1,3 @@
-// import React from 'react';
-// import { Container, Card, Row, Col, Form, FormControl, Navbar, Image, Button, Dropdown } from 'react-bootstrap';
-// import profile from '../../assets/profile.png';
-// import searchlight from '../../assets/searchlight.png';
-// import "./mylisting.css"; // Import the custom CSS file
-
-// export const MyListing = () => {
-//   return (
-//     <div>
-//       <Container className="mt-4">
-//         <Row>
-//           <Col className="bg-light p-3 d-flex justify-content-between align-items-center">
-//             <div className="mt-3">
-//               <Container>
-//                 <Row>
-//                   <Col className="bg-white text-dark fw-bold p-2 approved">Approved</Col>
-//                   <Col className="text-dark fw-bold p-2 unapproved">Unapproved</Col>
-//                 </Row>
-//               </Container>    
-//               <h1>My List</h1>
-//             </div>
-//             <div className="d-flex flex-column align-items-end">
-//               <Navbar bg="light" className="p-0">
-//                 <Navbar.Text>
-//                   <Image src={profile} roundedCircle className="profile-image" />
-//                 </Navbar.Text>
-//               </Navbar>
-//               <Form inline className="mt-2 search-form" style={{ width: "200px" }}>
-//                 <FormControl type="text" placeholder="Search" className="search-input" />
-//                 <Image src={searchlight} className="ms-3" />
-//               </Form>
-//             </div>
-//           </Col>
-//         </Row>
-//       </Container>
-
-//       {/* New Container and Row for Search Area and Dropdowns */}
-//       <Container className="mt-4">
-//         <Row className="align-items-center">
-//           <Col md={3}>
-//             <FormControl type="text" placeholder="Search" className="me-2" style={{ width: '100%' }} />
-//           </Col>
-//           {Array.from({ length: 5 }).map((_, index) => (
-//             <Col key={index}>
-//               <Dropdown>
-//                 <Dropdown.Toggle variant="" className="bg-white rounded-5 my-1" id={`dropdown-basic-${index}`}>
-//                   {index === 0 && "For sale"}
-//                   {index === 1 && "Price"}
-//                   {index === 2 && "Bods & Bath"}
-//                   {index === 3 && "Home type"}
-//                   {index === 4 && "More"}
-//                 </Dropdown.Toggle>
-//                 <Dropdown.Menu>
-//                   <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-//                   <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-//                   <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-//                 </Dropdown.Menu>
-//               </Dropdown>
-//             </Col>
-//           ))}
-//           <Col>
-//             <Button className="apply-filter rounded-5">Apply Filter</Button>
-//           </Col>
-//         </Row>
-//       </Container>
-
-//       <Container className="mt-5">
-//             <Row>
-//                 <Col className="">
-//                     <Card style={{ width: '25rem' }}>
-//                         <Card.Img variant="top" src="https://images.pexels.com/photos/17201892/pexels-photo-17201892/free-photo-of-red-litchi-fruit.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" />
-//                         <Card.Body>
-//                             <Card.Title>Card 1</Card.Title>
-//                             <Card.Text>
-//                                 This is a sample card with image 1.
-//                             </Card.Text>
-//                         </Card.Body>
-//                     </Card>
-//                 </Col>
-//                 <Col>
-//                     <Card style={{ width: '25rem' }}>
-//                         <Card.Img variant="top" src="https://images.pexels.com/photos/17201892/pexels-photo-17201892/free-photo-of-red-litchi-fruit.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" />
-//                         <Card.Body>
-//                             <Card.Title>Card 2</Card.Title>
-//                             <Card.Text>
-//                                 This is a sample card with image 2.
-//                             </Card.Text>
-//                         </Card.Body>
-//                     </Card>
-//                 </Col>
-//                 <Col>
-//                     <Card style={{ width: '25rem' }}>
-//                         <Card.Img variant="top" src="https://images.pexels.com/photos/17201892/pexels-photo-17201892/free-photo-of-red-litchi-fruit.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" />
-//                         <Card.Body>
-//                             <Card.Title>Card 3</Card.Title>
-//                             <Card.Text>
-//                                 This is a sample card with image 3.
-//                             </Card.Text>
-//                         </Card.Body>
-//                     </Card>
-//                 </Col>
-//             </Row>
-//             <Row className="mt-4 ">
-//                 <Col className="">
-//                     <Card style={{ width: '25rem' }}>
-//                         <Card.Img variant="top" src="https://images.pexels.com/photos/17201892/pexels-photo-17201892/free-photo-of-red-litchi-fruit.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" />
-//                         <Card.Body>
-//                             <Card.Title>Card 1</Card.Title>
-//                             <Card.Text>
-//                                 This is a sample card with image 1.
-//                             </Card.Text>
-//                         </Card.Body>
-//                     </Card>
-//                 </Col>
-//                 <Col>
-//                     <Card style={{ width: '25rem' }}>
-//                         <Card.Img variant="top" src="https://images.pexels.com/photos/17201892/pexels-photo-17201892/free-photo-of-red-litchi-fruit.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" />
-//                         <Card.Body>
-//                             <Card.Title>Card 2</Card.Title>
-//                             <Card.Text>
-//                                 This is a sample card with image 2.
-//                             </Card.Text>
-//                         </Card.Body>
-//                     </Card>
-//                 </Col>
-//                 <Col>
-//                     <Card style={{ width: '25rem' }}>
-//                         <Card.Img variant="top" src="https://images.pexels.com/photos/17201892/pexels-photo-17201892/free-photo-of-red-litchi-fruit.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" />
-//                         <Card.Body>
-//                             <Card.Title>Card 3</Card.Title>
-//                             <Card.Text>
-//                                 This is a sample card with image 3.
-//                             </Card.Text>
-//                         </Card.Body>
-//                     </Card>
-//                 </Col>
-//             </Row>
-//         </Container>
-
-//     </div>
-//   );
-// }
-
-// export default MyListing;
-
-
 import React, { useState } from 'react';
 
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -254,7 +108,7 @@ const MyListing = () => {
   const currentListings = currentView === 'Approved' ? approvedListings : unapprovedListings;
 
   return (
-    <div className="">
+    <div className="m-5">
       <div className='approved-unapproved-container mx-2'>
         <h6 
           className={`approved ${currentView === 'Approved' ? 'active' : ''}`} 
@@ -278,121 +132,144 @@ const MyListing = () => {
         </h6>
       </div>  
       
-      <div className='my-listing mx-3 mt-3'>My Listings</div>
-      <div className="filters-container container mt-2">
-        <div className="position-relative search-container">
-          {showIcon && <img src={Search} alt="searchicon" className="search-icon" />}
-          <Form.Control
-            className="custom-input pl-5"
-            placeholder="Search city, neighborhood, zip address"
-            aria-label="Search"
-            onFocus={handleFocus}
-            onBlur={handleBlur}
-          />
-        </div>
+      <h3 className='my-listing mx-3 mt-3'>My Listings</h3>
 
-        <div>
-          <div className='dropdown-container px-3'>
-            <Dropdown onSelect={(e) => handleSelect('forSale', e)}>
-              <Dropdown.Toggle id="dropdown-basic" className="bg-white rounded-5 my-1 custom-dropdown-toggle">
-                {selectedAction.forSale}
-                <img src={dropdown} alt="Dropdown Icon" className="dropdown-icon" />
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item eventKey="Action 1">Action 1</Dropdown.Item>
-                <Dropdown.Item eventKey="Action 2">Action 2</Dropdown.Item>
-                <Dropdown.Item eventKey="Action 3">Action 3</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
 
-            <Dropdown onSelect={(e) => handleSelect('price', e)}>
-              <Dropdown.Toggle id="dropdown-basic" className="bg-white rounded-5 my-1 custom-dropdown-toggle">
-                {selectedAction.price}
-                <img src={dropdown} alt="Dropdown Icon" className="dropdown-icon" />
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item eventKey="Action 1">Action 1</Dropdown.Item>
-                <Dropdown.Item eventKey="Action 2">Action 2</Dropdown.Item>
-                <Dropdown.Item eventKey="Action 3">Action 3</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+      <div className="filters-container mt-2">
+  {/* search */}
+  <div className="position-relative search-container">
+    {showIcon && <img src={Search} alt="searchicon" className="search-icon" />}
+    <Form.Control
+      className="custom-input pl-5"
+      placeholder="Search city, neighborhood, zip address"
+      aria-label="Search"
+      onFocus={handleFocus}
+      onBlur={handleBlur}
+    />
+  </div>
 
-            <Dropdown onSelect={(e) => handleSelect('bedsBath', e)}>
-              <Dropdown.Toggle id="dropdown-basic" className="bg-white rounded-5 my-1 custom-dropdown-toggle">
-                {selectedAction.bedsBath}
-                <img src={dropdown} alt="Dropdown Icon" className="dropdown-icon" />
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item eventKey="Action 1">Action 1</Dropdown.Item>
-                <Dropdown.Item eventKey="Action 2">Action 2</Dropdown.Item>
-                <Dropdown.Item eventKey="Action 3">Action 3</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-
-            <Dropdown onSelect={(e) => handleSelect('homeType', e)}>
-              <Dropdown.Toggle id="dropdown-basic" className="bg-white rounded-5 my-1 custom-dropdown-toggle">
-                {selectedAction.homeType}
-                <img src={dropdown} alt="Dropdown Icon" className="dropdown-icon" />
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item eventKey="Action 1">Action 1</Dropdown.Item>
-                <Dropdown.Item eventKey="Action 2">Action 2</Dropdown.Item>
-                <Dropdown.Item eventKey="Action 3">Action 3</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-
-            <Dropdown onSelect={(e) => handleSelect('more', e)}>
-              <Dropdown.Toggle id="dropdown-basic" className="bg-white rounded-5 my-1 custom-dropdown-toggle">
-                {selectedAction.more}
-                <img src={dropdown} alt="Dropdown Icon" className="dropdown-icon" />
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item eventKey="Action 1">Action 1</Dropdown.Item>
-                <Dropdown.Item eventKey="Action 2">Action 2</Dropdown.Item>
-                <Dropdown.Item eventKey="Action 3">Action 3</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-
-            <button className='apply-filter'>Apply Filter</button>
-          
-          </div>
-        </div>
+  {/* dropdowns */}
+  <div className="dropdowns-wrapper">
+    <div className='dropdown-container px-3'>
+      <div className='dropdown-item-wrapper'>
+        <Dropdown onSelect={(e) => handleSelect('forSale', e)}>
+          <Dropdown.Toggle id="dropdown-basic" className="bg-white rounded-5 my-1 custom-dropdown-toggle">
+            {selectedAction.forSale}
+            <img src={dropdown} alt="Dropdown Icon" className="dropdown-icon" />
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item eventKey="Action 1">Action 1</Dropdown.Item>
+            <Dropdown.Item eventKey="Action 2">Action 2</Dropdown.Item>
+            <Dropdown.Item eventKey="Action 3">Action 3</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
       </div>
 
+      <div className='dropdown-item-wrapper'>
+        <Dropdown onSelect={(e) => handleSelect('price', e)}>
+          <Dropdown.Toggle id="dropdown-basic" className="bg-white rounded-5 my-1 custom-dropdown-toggle">
+            {selectedAction.price}
+            <img src={dropdown} alt="Dropdown Icon" className="dropdown-icon" />
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item eventKey="Action 1">Action 1</Dropdown.Item>
+            <Dropdown.Item eventKey="Action 2">Action 2</Dropdown.Item>
+            <Dropdown.Item eventKey="Action 3">Action 3</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+      </div>
+
+      <div className='dropdown-item-wrapper'>
+        <Dropdown onSelect={(e) => handleSelect('bedsBath', e)}>
+          <Dropdown.Toggle id="dropdown-basic" className="bg-white rounded-5 my-1 custom-dropdown-toggle">
+            {selectedAction.bedsBath}
+            <img src={dropdown} alt="Dropdown Icon" className="dropdown-icon" />
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item eventKey="Action 1">Action 1</Dropdown.Item>
+            <Dropdown.Item eventKey="Action 2">Action 2</Dropdown.Item>
+            <Dropdown.Item eventKey="Action 3">Action 3</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+      </div>
+
+      <div className='dropdown-item-wrapper'>
+        <Dropdown onSelect={(e) => handleSelect('homeType', e)}>
+          <Dropdown.Toggle id="dropdown-basic" className="bg-white rounded-5 my-1 custom-dropdown-toggle">
+            {selectedAction.homeType}
+            <img src={dropdown} alt="Dropdown Icon" className="dropdown-icon" />
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item eventKey="Action 1">Action 1</Dropdown.Item>
+            <Dropdown.Item eventKey="Action 2">Action 2</Dropdown.Item>
+            <Dropdown.Item eventKey="Action 3">Action 3</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+      </div>
+
+      <div className='dropdown-item-wrapper'>
+        <Dropdown onSelect={(e) => handleSelect('more', e)}>
+          <Dropdown.Toggle id="dropdown-basic" className="bg-white rounded-5 my-1 custom-dropdown-toggle">
+            {selectedAction.more}
+            <img src={dropdown} alt="Dropdown Icon" className="dropdown-icon" />
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item eventKey="Action 1">Action 1</Dropdown.Item>
+            <Dropdown.Item eventKey="Action 2">Action 2</Dropdown.Item>
+            <Dropdown.Item eventKey="Action 3">Action 3</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+      </div>
+
+      <button className='apply-filter'>Apply Filter</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+        {/* approved card section */}
       {currentListings.length > 0 ? (
       <Container className="listings-container mt-3">
       <Row>
         {currentListings.slice(0, 3).map((listing, index) => (
-          <Col key={index} xs={12} md={6} lg={4} className='mb-3'>
-            <Card border='light' bg='light'>
-              <Card.Img variant="top" src={listing.image} alt={listing.address} />
-              <button className='custom-button'>SELL</button>
-              <Card.Body className='card-body'>
-                <Card.Title className='card-price'>{listing.price}</Card.Title>
-                <Card.Text>{listing.address}</Card.Text>
-                <div className="listing-details">
-                  <div className="listing-detail-item">
-                    <img src={bed} alt="bed icon" />
-                    <span>{listing.bed}</span>
-                  </div>
-                  <div className="listing-detail-item">
-                    <img src={room} alt="room icon" />
-                    <span>{listing.room}</span>
-                  </div>
-                  <div className="listing-detail-item">
-                    <img src={bath} alt="bath icon" />
-                    <span>{listing.bath}</span>
-                  </div>
-                  <div className="listing-detail-item">
-                    <img src={sqft} alt="sqft icon" />
-                    <span>{listing.sqft}</span>
-                  </div>
-                </div>
-              </Card.Body>
-            </Card>
-          </Col>
+        <Col key={index} xs={12} md={6} lg={4} className='mb-3'>
+        <Card border='light' bg='light'>
+          <Card.Img variant="top" src={listing.image} alt={listing.address} />
+          <button className='custom-button'>SELL</button>
+          <Card.Body className='card-body'>
+            <h1 className='card-price'>{listing.price}</h1>
+            <div className='card-text'>{listing.address}</div>
+            <div className="listing-details mt-3">
+              <div className="listing-detail-item">
+                <img src={bed} alt="bed icon" />
+                <span>{listing.bed}</span>
+              </div>
+              <div className="listing-detail-item">
+                <img src={room} alt="room icon" />
+                <span>{listing.room}</span>
+              </div>
+              <div className="listing-detail-item">
+                <img src={bath} alt="bath icon" />
+                <span>{listing.bath}</span>
+              </div>
+              <div className="listing-detail-item">
+                <img src={sqft} alt="sqft icon" />
+                <span>{listing.sqft}</span>
+              </div>
+            </div>
+          </Card.Body>
+        </Card>
+      </Col>
         ))}
       </Row>
+
+
+
+
       <Row className='mt-3'>
         {currentListings.slice(3).map((listing, index) => (
           <Col key={index} xs={12} md={6} lg={4} className='mb-3'>
@@ -400,9 +277,9 @@ const MyListing = () => {
               <Card.Img variant="top" src={listing.image} alt={listing.address} />
               <button className='custom-button'>SELL</button>
               <Card.Body className='card-body'>
-                <h1>{listing.price}</h1>
-                <div>{listing.address}</div>
-                <div className="listing-details">
+                <h1 className='card-price'>{listing.price}</h1>
+                <div className='card-text'>{listing.address}</div>
+                <div className="listing-details mt-3">
                   <div className="listing-detail-item">
                     <img src={bed} alt="bed icon" />
                     <span>{listing.bed}</span>
@@ -428,6 +305,8 @@ const MyListing = () => {
     </Container>
     
       ) : (
+
+        // unapproved card section
         <div className="unapproved-page">
 
    <Container className='mt-3'>
@@ -437,11 +316,11 @@ const MyListing = () => {
         <img src={firstlistingimage} alt="card-image" className="" />
         <button className='unapproved-button'>UNAPPROVED</button>
         <div className='card-body'>
-          <h3 className='card-price m-1 p-1'>$148,000</h3>
-          <div className='card-text m-1 p-1'>
+          <h3 className='card-price'>$148,000</h3>
+          <div className='card-text'>
             Block 45, Rockvale manors, Apo, Abuja
           </div>
-          <div className="listing-details m-1 p-1">
+          <div className="listing-details mt-3">
             <div className="listing-detail-item">
               <img src={bed} alt="bed icon" />
               3 beds
@@ -471,7 +350,7 @@ const MyListing = () => {
           <div className='card-text m-1 p-1'>
             Block 45, Rockvale manors, Apo, Abuja
           </div>
-          <div className="listing-details m-1 p-1">
+          <div className="listing-details mt-3">
             <div className="listing-detail-item">
               <img src={bed} alt="bed icon" />
               3 beds
@@ -501,7 +380,7 @@ const MyListing = () => {
           <div className='card-text m-1 p-1'>
             Block 45, Rockvale manors, Apo, Abuja
           </div>
-          <div className="listing-details m-1 p-1">
+          <div className="listing-details mt-3">
             <div className="listing-detail-item">
               <img src={bed} alt="bed icon" />
               3 beds
@@ -525,7 +404,7 @@ const MyListing = () => {
   </Row>
 
   <Row className=''>
-    <Col>
+    <Col className='mb-5'>
       <Card border='light' bg='light' className="">
         <img src={fourthcardlisting} alt="card-image" className="" />
         <button className='unapproved-button'>UNAPPROVED</button>
@@ -534,7 +413,7 @@ const MyListing = () => {
           <div className='card-text m-1 p-1'>
             Block 45, Rockvale manors, Apo, Abuja
           </div>
-          <div className="listing-details m-1 p-1">
+          <div className="listing-details mt-3">
             <div className="listing-detail-item">
               <img src={bed} alt="bed icon" />
               3 beds
@@ -555,7 +434,7 @@ const MyListing = () => {
         </div>
       </Card>
     </Col>
-    <Col>
+    <Col className='mb-5'>
       <Card border='light' bg='light' className="">
         <img src={fifthcardlisting} alt="card-image" className="" />
         <button className='unapproved-button'>UNAPPROVED</button>
@@ -564,7 +443,7 @@ const MyListing = () => {
           <div className='card-text m-1 p-1'>
             Block 45, Rockvale manors, Apo, Abuja
           </div>
-          <div className="listing-details m-1 p-1">
+          <div className="listing-details mt-3">
             <div className="listing-detail-item">
               <img src={bed} alt="bed icon" />
               3 beds
@@ -585,7 +464,7 @@ const MyListing = () => {
         </div>
       </Card>
     </Col>
-    <Col>
+    <Col className='mb-5'>
       <Card border='light' bg='light' className="">
         <img src={thirdcardlisting} alt="card-image" className="" />
         <button className='unapproved-button'>UNAPPROVED</button>
@@ -594,7 +473,7 @@ const MyListing = () => {
           <div className='card-text m-1 p-1'>
             Block 45, Rockvale manors, Apo, Abuja
           </div>
-          <div className="listing-details m-1 p-1">
+          <div className="listing-details mt-3">
             <div className="listing-detail-item">
               <img src={bed} alt="bed icon" />
               3 beds

@@ -1,19 +1,19 @@
 
 
-
 // import React, { useState } from 'react';
-// import { Container, Row, Col, Button } from 'react-bootstrap';
+// import { Container, Row, Col } from 'react-bootstrap';
+// import Sidebar from './Components/Sidebar/Sidebar';
 // import Dashb from './Components/Dash/Dashb';
 // import Activities from './Components/Activity/Activities';
 // import MyListing from './Components/MyListing/MyListing';
-// import Favourites from './Favourites';
-// import Sidebar from './Components/Sidebar/Sidebar';
+// import AccountSettings from './Components/AccountingSettings/AccountingSettings'
+// import Favorites from './Components/Favorites/Favorites';
+// import SavedProfile from './Components/SavedProfile/SavedProfile';
 
 // import './App.css';  // Import the CSS file
 
 // const App = () => {
 //   const [activeTab, setActiveTab] = useState('Home');
-//   const [sidebarOpen, setSidebarOpen] = useState(false);
 
 //   const renderContent = () => {
 //     switch (activeTab) {
@@ -24,31 +24,23 @@
 //       case 'Settings':
 //         return <MyListing />;
 //       case 'Messages':
-//         return <Favourites />;
+//         return <Favorites />;
+//       case 'SavedProfile':
+//         return <SavedProfile />;
+//       case 'AccountSettings':
+//         return <AccountSettings />;
 //       default:
 //         return <Dashb />;
 //     }
 //   };
 
 //   return (
-//     <Container fluid className="bg-light">
-//       <Button 
-//         variant="primary" 
-//         className="d-md-none mb-3 mt-2 toggle-button"
-//         onClick={() => setSidebarOpen(!sidebarOpen)}
-//         style={{ zIndex: 1050 }}  // Ensure button is above the sidebar
-//       >
-//         Toggle Sidebar
-//       </Button>
+//     <Container fluid>
 //       <Row>
-//         <Col 
-//           md={3} 
-//           className={`sidebar-container ${sidebarOpen ? 'open' : ''} d-md-block`}
-//           style={{ zIndex: 1040 }}  // Sidebar z-index
-//         >
+//         <Col md={2}>
 //           <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
 //         </Col>
-//         <Col md={9} className="bg-light content" style={{ height: "210vh" }}>
+//         <Col md={10} className="bg-light content-area" style={{ height: "170vh" }}>
 //           {renderContent()}
 //         </Col>
 //       </Row>
@@ -59,20 +51,30 @@
 // export default App;
 
 
+
+
+
+
+
+
+
+
 import React, { useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Dashb from './Components/Dash/Dashb';
 import Activities from './Components/Activity/Activities';
+import Security from './Components/Security/Security';
 import MyListing from './Components/MyListing/MyListing';
-import AccountSettings from './Components/AccountingSettings/AccountingSettings'
+import AccountSettings from './Components/AccountingSettings/AccountingSettings';
 import Favorites from './Components/Favorites/Favorites';
 import SavedProfile from './Components/SavedProfile/SavedProfile';
-
+import Logout from './Components/Logout/Logout';
 import './App.css';  // Import the CSS file
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('Home');
+  const [isSidebarVisible, setSidebarVisible] = useState(false);
 
   const renderContent = () => {
     switch (activeTab) {
@@ -88,6 +90,10 @@ const App = () => {
         return <SavedProfile />;
       case 'AccountSettings':
         return <AccountSettings />;
+      case 'Security':
+        return <Security/>;
+      case 'Logout':
+        return <Logout/>;
       default:
         return <Dashb />;
     }
@@ -95,11 +101,26 @@ const App = () => {
 
   return (
     <Container fluid>
+      <Button 
+        className="toggle-sidebar-button border-0" style={{background:"darkorange"}} 
+        onClick={() => setSidebarVisible(!isSidebarVisible)}
+      >
+        {isSidebarVisible ? 'X' : 'X'}
+      </Button>
       <Row>
-        <Col md={2}>
-          <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
-        </Col>
-        <Col md={10} className="bg-light" style={{ height: "130vh" }}>
+        {isSidebarVisible && (
+          <Col md={2}>
+            <Sidebar 
+              activeTab={activeTab} 
+              setActiveTab={(tab) => { 
+                setActiveTab(tab);
+                setSidebarVisible(false);
+              }}
+              setSidebarVisible={setSidebarVisible} 
+            />
+          </Col>
+        )}
+        <Col md={isSidebarVisible ? 10 : 12} className="bg-light content-area" style={{ height: "170vh" }}>
           {renderContent()}
         </Col>
       </Row>
@@ -108,4 +129,5 @@ const App = () => {
 };
 
 export default App;
+
 

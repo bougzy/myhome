@@ -1,48 +1,44 @@
-/* App.css */
+
 .sidebar .list-group-item.active {
-  background-color: #FF8844 !important;  /* Ensure this color matches your desired active background color */
-  color: white !important;  /* Ensure the text color is readable */
+  background-color: #FF8844 !important;  
+  color: white !important;  
   border-radius:"20px" !important;
 }
 
 
-.sidebar-container {
+
+
+
+.toggle-sidebar-button {
+  display: none;
   position: fixed;
-  top: 0;
-  bottom: 0;
-  left: -100%;
-  transition: left 0.3s ease-in-out;
-  z-index: 1040; /* Make sure it overlaps the content */
-  width: 75%; /* For mobile view, sidebar takes 75% of the width */
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  background-color: #FF8844;
+  color: rgb(138, 6, 6);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.sidebar-container.open {
-  left: 0;
-}
-
-@media (min-width: 768px) {
-  .sidebar-container {
-    position: static;
-    transition: none;
-    left: 0;
-    width: 100%; /* Sidebar takes full width of its column on desktop */
+@media (max-width: 768px) {
+  .toggle-sidebar-button {
+    display: block;
   }
-}
 
-.content {
-  margin-left: 0;
-  transition: margin-left 0.3s ease-in-out;
-}
-
-@media (min-width: 768px) {
-  .content {
-    margin-left: 0;
-    width: 100%; /* Content takes full width of its column on desktop */
+  .sidebar {
+    position: fixed;
+    width: 80%;
+    height: 100%;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+    background-color: white;
   }
-}
 
-.toggle-button {
-  position: relative;
-  z-index: 1050; /* Ensure button is above the sidebar */
+  .content-area {
+    padding-top: 60px; /* to avoid content getting behind the button */
+  }
 }
 

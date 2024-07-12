@@ -1,34 +1,4 @@
-/* 
-@import url('https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap');
 
-
-@font-face {
-    font-family: 'SF Pro Display';
-    src: url("./../public/fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
-}
-
-@font-face {
-    font-family: 'SF Pro Display';
-    font-weight: bold;
-    src: url("./../public/fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
-}
-
-@font-face {
-    font-family: 'SF Pro Display';
-    font-weight: medium;
-    src: url("./../public/fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype");
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: Kufam;
-}
-
-
-p, div {
-    font-family: 'SF Pro Display';
-    font-weight: 400;
-    text-align: left;
-} */
 
 
 @import url('https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap');
@@ -59,3 +29,60 @@ p, div {
     font-weight: 400;
     text-align: left;
 }
+
+
+
+
+
+.sidebar {
+    height: 100vh;
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar-open {
+    transform: translateX(0);
+  }
+  
+  .sidebar-closed {
+    transform: translateX(-100%);
+  }
+  
+  .content-area {
+    height: 100vh; /* Adjust as needed */
+    overflow-y: auto; /* Enable scrolling if content exceeds viewport */
+  }
+  
+  .sidebar-toggle-btn {
+    display: none; /* Hide button by default */
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      position: fixed;
+      z-index: 1000;
+      width: 70%; /* Adjust width as needed */
+      max-width: 300px; /* Limit maximum width */
+      overflow-y: auto; /* Enable scrolling */
+    }
+  
+    .sidebar-closed {
+      transform: translateX(-100%);
+    }
+  
+    .content-area {
+      padding-left: 0; /* Adjust padding as needed */
+    }
+  
+    .sidebar-toggle-btn {
+      display: block;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 1100;
+      font-size: 1.5rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+  }
+  

@@ -6,14 +6,12 @@ import coin from "../../assets/coin.png"
 import bag from "../../assets/bag.png"
 import trade from "../../assets/trade.png"
 import user from "../../assets/user.png"
-// import SalesLevel from '../../assets/SalesLevel.png';
-// import wavegraph from '../../assets/wavegraph.png';
-// import ProductsCustomer from '../../assets/ProductsCustomer.png';
-// import EarningVisitor from '../../assets/EarningVisitor.png';
-import './dash.css'; // Import the custom CSS file
 import { MdMargin } from 'react-icons/md';
 import CalendarComponent from '../Activity/Calendar';
 import { FaRegistered } from 'react-icons/fa';
+import LineChart from './LineChart';
+import SalesChart from './SalesChart';
+import "./dash.css"
 
 export const Dashb = () => {
   return (
@@ -27,34 +25,30 @@ export const Dashb = () => {
           position: '',
           top: 0,
           right: 0,
-          maxWidth: '180px',
-          maxHeight: '150px'    
+          maxWidth: '65px',
+          maxHeight: '65px'    
         }}
         roundedCircle
       />
     </Container>
     </div>
 
-
-
-
-
 <Container className="mt-4">
-  <Row>
-    <Col xs={12} md={6} className="bg-light p-3 d-flex justify-content-between align-items-center">
-      <div className="mt-3">
-        <p>Hi, Andrei,</p>
-        <h1>Welcome to RealHomes!</h1>
-      </div>
-    </Col>
-    <Col xs={12} md={6} className="d-flex flex-column align-items-end mt-4">
-      <Form inline className="mt-2 search search-form search-form-mobile">
-        <FormControl type="text" placeholder="Search" className="search-input" />
-        <Image src={searchlight} className="ms-2" />
-      </Form>
-    </Col>
-  </Row>
-</Container>
+        <Row>
+            <Col xs={12} md={6} className="bg-light p-3 d-flex justify-content-between align-items-center">
+                <div className="mt-3">
+                    <p>Hi, Andrei,</p>
+                    <h1>Welcome to RealHomes!</h1>
+                </div>
+            </Col>
+            <Col xs={12} md={6} className="d-flex flex-column align-items-end mt-4">
+                <Form inline className="mt-2 search search-form search-form-mobile d-flex align-items-center">
+                    <FormControl type="text" placeholder="Search" className="search-input" />
+                    <Image src={searchlight} className="ml-2" />
+                </Form>
+            </Col>
+        </Row>
+    </Container>
 
 
 
@@ -158,15 +152,17 @@ export const Dashb = () => {
           </div>
         </Col>
 
-        <Col xs={12} lg={4} className="mt-5">
-        <Card className="border-0 rounded-4">
-                <Card.Body className="mt-5" style={{height:"65vh"}}>
-                    
+        <Col xs={12} lg={4} className="mt-4">
+                <Card.Body>
+                    <LineChart />
                   <Card.Text></Card.Text>
                 </Card.Body>
-              </Card>
         </Col>
       </Row>
+    </Container>
+
+    <Container>
+      <SalesChart />
     </Container>
 </div>
   );
