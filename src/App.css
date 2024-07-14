@@ -1,4 +1,4 @@
-
+/* 
 .sidebar .list-group-item.active {
   background-color: #FF8844 !important;  
   color: white !important;  
@@ -12,8 +12,8 @@
 .toggle-sidebar-button {
   display: none;
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 0px;
+  left: 0px;
   z-index: 1000;
   background-color: #FF8844;
   color: rgb(138, 6, 6);
@@ -38,7 +38,63 @@
   }
 
   .content-area {
-    padding-top: 60px; /* to avoid content getting behind the button */
+    padding-top: 0px; 
   }
+}
+ */
+
+
+
+ .app-container {
+  height: 100vh;
+  overflow: hidden; /* Prevent double scrollbars */
+}
+
+.content-area {
+  overflow-y: auto;
+  height: 100vh; /* Ensure full height for scrolling content */
+}
+
+.toggle-sidebar-button {
+  display: none;
+  position: fixed;
+  top: 10px; /* Adjusted to avoid overlapping with the content */
+  left: 10px; /* Adjusted to avoid overlapping with the content */
+  z-index: 1000;
+  background-color: #FF8844;
+  color: rgb(138, 6, 6);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .toggle-sidebar-button {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    width: 80%;
+    height: 100%;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+    background-color: white;
+  }
+
+  .content-area {
+    padding-top: 0px; /* to avoid content getting behind the button */
+  }
+}
+
+.sidebar-column {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Adjustments to ensure no double scrollbar */
+body, html {
+  overflow: hidden;
 }
 

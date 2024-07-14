@@ -42,37 +42,37 @@
 
 
 
-.sidebar-container {
+/* .sidebar-container {
   position: fixed;
   top: 0;
   bottom: 0;
   left: -100%;
   transition: left 0.3s ease-in-out;
-  z-index: 1040; /* Make sure it overlaps the content */
-}
+  z-index: 1040; 
+} */
 
-.sidebar-container.open {
+/* .sidebar-container.open {
   left: 0;
-}
+} */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .sidebar-container {
     position: static;
     transition: none;
     left: 0;
   }
-}
+} */
 
-.content {
+/* .content {
   margin-left: 0;
   transition: margin-left 0.3s ease-in-out;
 }
 
 @media (min-width: 768px) {
   .content {
-    margin-left: 16.666667%; /* Adjust this value according to your sidebar width */
+    margin-left: 16.666667%; 
   }
-}
+} */
 
 
 .custom-table tbody tr,
