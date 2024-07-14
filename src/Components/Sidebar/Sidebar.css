@@ -1,0 +1,42 @@
+
+
+
+
+   /* Sidebar styles */
+.sidebar {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+  
+  .sidebar-column {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+  
+  /* Active sidebar item styles */
+  .list-group-item.active {
+    background-color: #FF7B29 !important;
+    color: white !important;
+  }
+  
+  /* Mobile view sidebar styles */
+  @media (max-width: 768px) {
+    .sidebar {
+      position: fixed;
+      width: 80%;
+      height: 100%;
+      z-index: 999;
+      transition: transform 0.3s ease-in-out;
+      background-color: white;
+      overflow-y: auto;
+    }
+  
+    .content-area {
+      padding-top: 0px;
+    }
+  
+    .close-sidebar-button {
+      display: block;
+    }
+  }
+  

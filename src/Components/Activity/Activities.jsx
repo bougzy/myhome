@@ -13,7 +13,7 @@ export const Dashb = () => {
   return (
     <div>
 <div className="container" >
-    <Container className="p-3" style={{ position: 'relative', marginLeft: '-30px' }}>
+<Container className="p-3" style={{ position: 'relative', marginLeft:"-30px" }}>
       <Image
       className="position-absolute mt-2 border profile"
         src={profile}
@@ -21,8 +21,8 @@ export const Dashb = () => {
           position: '',
           top: 0,
           right: 0,
-          maxWidth: '180px',
-          maxHeight: '150px'    
+          maxWidth: '65px',
+          maxHeight: '65px'    
         }}
         roundedCircle
       />
@@ -45,10 +45,10 @@ export const Dashb = () => {
       </div>
     </Col>
     <Col xs={12} md={6} className="d-flex flex-column align-items-end mt-4">
-      <Form inline className="mt-2 search search-form search-form-mobile">
-        <FormControl type="text" placeholder="Search" className="search-input" />
-        <Image src={searchlight} className="ms-2" />
-      </Form>
+    <Form inline className="mt-2 search search-form search-form-mobile d-flex align-items-center">
+                    <FormControl type="text" placeholder="Search" className="search-input" />
+                    <Image src={searchlight} className="ml-2" />
+                </Form>
     </Col>
   </Row>
 </Container>
