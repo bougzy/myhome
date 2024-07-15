@@ -10,7 +10,9 @@
     }
 
     .chart-container .card {
-        width: auto; /* Adjust card width to fit content */
-        min-width: 490px; /* Ensure the card has a minimum width */
+        width: auto; 
+        min-width: 490px; 
     }
+
+    
 }
