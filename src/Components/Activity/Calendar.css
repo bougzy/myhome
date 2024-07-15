@@ -1,0 +1,44 @@
+.calendar {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 500px;
+    background-color: white;
+  }
+  
+  .calendar h3 {
+    font-family: 'Arial, sans-serif';
+    color: #20335b;
+  }
+  
+  .calendar .date {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .calendar .date.active {
+    background-color: #ff9030;
+    color: white;
+  }
+  
+  .calendar .date:hover {
+    cursor: pointer;
+    background-color: #ffad66;
+  }
+  
+  .calendar button {
+    border: none;
+    background: none;
+    font-size: 1.5em;
+    color: #ff9030;
+  }
+  
+  .calendar button:focus {
+    outline: none;
+  }
+  
+  

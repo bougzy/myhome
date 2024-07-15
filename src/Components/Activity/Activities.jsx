@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Table, Row, Col, Card, Form, FormControl, Navbar, Image, Button } from 'react-bootstrap';
 import profile from '../../assets/profile.png';
 import searchlight from '../../assets/searchlight.png';
-import CalendarComponent from './Calendar';
+import Calendar from './Calendar';
 import { FaRegistered } from 'react-icons/fa';
 import freshtop from "../../assets/freshtop.png"
 import x from "../../assets/x.png"
@@ -143,7 +143,7 @@ export const Dashb = () => {
         </Col>
 
         <Col xs={12} lg={4} className="">
-          <CalendarComponent />
+          <Calendar/>
         </Col>
       </Row>
     </Container>
