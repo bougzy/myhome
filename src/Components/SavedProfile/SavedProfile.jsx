@@ -10,10 +10,10 @@ import "./savedprofile.css";
 
 const SavedProfile = () => {
   return (
-    <div className="">
+    <div className="" style={{marginTop:"70px"}}>
 
       <div className="">
-        <h3 className='my-listing mx-3 mt-5'>Saved profile</h3>
+        <h3 className='my-listing mx-3'>Saved profile</h3>
 
 
 <div className='mt-3'>
@@ -41,7 +41,7 @@ const SavedProfile = () => {
           <button className='profile-buttons mt-1'>Rentals</button>
         </div>
         <div className='review-open-container'>
-          <div className="reviews">No Reviews Yet</div>
+          <div className="reviews">No Reviews</div>
           <button className='open-profiles'>Open profile</button>
         </div>
       </div>

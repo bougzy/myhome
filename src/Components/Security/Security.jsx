@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 const Security = () => {
   return (
     <div>
-         <h3 className='my-listing mx-3 mt-5'>Sign in & Security</h3>
+         <h3 className='my-listing mx-3' style={{marginTop:"70px"}}>Sign in & Security</h3>
 
          <Form className='mt-5'>
       <Form.Group className="mb-3 position-relative custom-form-group" controlId="exampleForm.ControlInput1">
@@ -78,7 +78,7 @@ const Security = () => {
         />
         <div className="position-absolute d-flex align-items-center" style={{ top: '50%', transform: 'translateY(-50%)', right: '20px' }}>
           <div className="me-2 na"></div>
-          <h1 className='edit mt-2'>Deactivate account</h1>
+          <h1 className='edit mt-3'>Deactivate account</h1>
         </div>
         <Form.Label className="custom-placeholder-labels">Deactivate account</Form.Label>
       </Form.Group>

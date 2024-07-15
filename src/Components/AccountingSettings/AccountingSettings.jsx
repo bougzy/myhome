@@ -18,6 +18,7 @@ const MyListing = () => {
   ];
 
   return (
+    <div style={{marginTop:"70px"}}> 
     <div className="mt-5">
       <div className="">
         <div className='mx-5'>
@@ -424,6 +425,7 @@ const MyListing = () => {
           </Row>
         </Container>
       </div>
+    </div>
     </div>
   );
 };

@@ -109,7 +109,7 @@ const Favorites = () => {
 
 
   return (
-    <div>
+    <div style={{marginTop:"70px"}}>
     <h3 className='my-listing mx-3 mt-5'>Favorites</h3>
 
     <div className="filters-container mt-2">

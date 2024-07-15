@@ -108,7 +108,9 @@ const MyListing = () => {
   const currentListings = currentView === 'Approved' ? approvedListings : unapprovedListings;
 
   return (
-    <div className="m-5">
+    <div style={{marginTop:"70px"}}>
+   
+    <div className="m-2">
       <div className='approved-unapproved-container mx-2'>
         <h6 
           className={`approved ${currentView === 'Approved' ? 'active' : ''}`} 
@@ -500,8 +502,10 @@ const MyListing = () => {
 
         </div>
         
+        
       )}
       <button className='fixed-add-list-button'>Add Listing</button>
+    </div>
     </div>
   );
 };
