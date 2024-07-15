@@ -366,7 +366,7 @@ const Favorites = () => {
       </Card>
     </Col>
 
-    <Col className='mb-5'>
+    <Col style={{marginBottom:"180px"}}>
       <Card border='light' bg='light' className="">
         <img src={thirdcardlisting} alt="card-image" className="" />
           <button className='custom-button'>SELL</button>

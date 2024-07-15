@@ -84,7 +84,7 @@ const SavedProfile = () => {
     </div>
   </Card>
 
-  <Card body border='light' className=' mt-3 p-2'>
+  <Card body border='light' className=' mt-3 p-2'style={{marginBottom:"180px"}}>
     <div className="profile-containers">
       <div className="">
         <img src={profileThree} alt="profileOne" className="saved-profile-image" />

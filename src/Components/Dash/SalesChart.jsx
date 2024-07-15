@@ -50,7 +50,7 @@ const SalesChart = () => {
   };
 
   return (
-    <div> 
+    <div style={{marginBottom:"180px"}}> 
     <Card className="border border-0">
       <Card.Body>
         <Card.Title style={{ color: '#003366' }}>Sales Statistics</Card.Title>

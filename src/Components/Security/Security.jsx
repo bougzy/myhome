@@ -83,7 +83,7 @@ const Security = () => {
         <Form.Label className="custom-placeholder-labels">Deactivate account</Form.Label>
       </Form.Group>
 
-      <Form.Group className="mb-3 position-relative" controlId="exampleForm.ControlInput6">
+      <Form.Group style={{marginBottom:"180px"}} className="position-relative" controlId="exampleForm.ControlInput6">
         <Form.Control
           type="number"
           placeholder="this will shut down your account, but retain your information"

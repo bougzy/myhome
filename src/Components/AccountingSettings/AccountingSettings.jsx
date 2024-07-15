@@ -18,7 +18,7 @@ const MyListing = () => {
   ];
 
   return (
-    <div style={{marginTop:"70px"}}> 
+    <div style={{marginTop:"100px", marginBottom:"180px"}}> 
     <div className="mt-5">
       <div className="">
         <div className='mx-5'>

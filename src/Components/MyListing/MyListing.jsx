@@ -466,7 +466,7 @@ const MyListing = () => {
         </div>
       </Card>
     </Col>
-    <Col className='mb-5'>
+    <Col style={{marginBottom:"180px"}}>
       <Card border='light' bg='light' className="">
         <img src={thirdcardlisting} alt="card-image" className="" />
         <button className='unapproved-button'>UNAPPROVED</button>
