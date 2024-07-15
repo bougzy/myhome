@@ -31,7 +31,8 @@ const MyListing = () => {
                 style={{
                   borderColor: radioValue === radio.value ? '#FFFFFF' : '#CCCCCC',
                   color: radioValue === radio.value ? 'black' : 'black',
-                  backgroundColor: radioValue === radio.value ? '#FFFFFF' : 'transparent'
+                  backgroundColor: radioValue === radio.value ? '#FFFFFF' : 'transparent',
+                  fontSize:"18px"
                 }}
                 name="radio"
                 value={radio.value}

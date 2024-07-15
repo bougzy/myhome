@@ -1,0 +1,16 @@
+.chart-container {
+    overflow-x: hidden; /* Default to hidden overflow */
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        overflow-x: auto; /* Enables horizontal scrolling on mobile */
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .chart-container .card {
+        width: auto; /* Adjust card width to fit content */
+        min-width: 490px; /* Ensure the card has a minimum width */
+    }
+}

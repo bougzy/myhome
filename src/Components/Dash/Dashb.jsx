@@ -152,7 +152,7 @@ export const Dashb = () => {
           </div>
         </Col>
 
-        <Col xs={12} lg={4} className="mt-4">
+        <Col xs={12} lg={4} className="mt-4" >
                 <Card.Body>
                     <LineChart />
                   <Card.Text></Card.Text>
