@@ -1,28 +1,11 @@
-// // src/components/Calendar.js
-// import React, { useState } from 'react';
-// import Calendar from 'react-calendar';
-// import 'react-calendar/dist/Calendar.css';
 
-// const CalendarComponent = () => {
-//   const [value, setValue] = useState(new Date());
-
-//   const onChange = (nextValue) => {
-//     setValue(nextValue);
-//   };
-
-//   return (
-//     <div className="mt-5">
-//       <Calendar onChange={onChange} value={value} className="p-5 border rounded" />
-//     </div>
-//   );
-// };
-
-// export default CalendarComponent;
 
 
 import React, { useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import './Calendar.css';
+import leftb from "../../assets/leftb.png"
+import rightb from "../../assets/rightb.png"
 
 const Calendar = () => {
   const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -63,8 +46,8 @@ const Calendar = () => {
   const activeDays = [1, 22, 24, 31]; // Days to highlight
 
   return (
-    <Container className="calendar mt-4">
-      <Row className="justify-content-between align-items-center">
+    <Container className="calendar">
+      <Row className="justify-content-between align-items-centers">
         <Col xs="auto">
           <h3>
             {currentDate.toLocaleString('default', { month: 'long' })} {currentDate.getFullYear()}
@@ -73,10 +56,10 @@ const Calendar = () => {
         <Col xs="auto">
           <div>
             <Button variant="link" className="p-0 mx-3 sprint-buttons round-border" onClick={() => changeMonth(-1)}>
-              <span>&lt;</span>
+              <img src={leftb} />
             </Button>
             <Button variant="link" className="p-0 sprint-buttons round-border" onClick={() => changeMonth(1)}>
-              <span>&gt;</span>
+            <img src={rightb} />
             </Button>
           </div>
         </Col>

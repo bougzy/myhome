@@ -7,8 +7,9 @@
   }
   
   .calendar h3 {
-    font-family: 'Arial, sans-serif';
+    font-family: 'kufam';
     color: #20335b;
+    font-weight: 700;
   }
   
   .calendar .date {
@@ -16,8 +17,9 @@
     width: 30px;
     height: 30px;
     line-height: 30px;
-    border-radius: 50%;
+    border-radius: 35%;
     transition: background-color 0.3s;
+    font-weight: 700;
   }
   
   .calendar .date.active {
@@ -34,7 +36,7 @@
     border: none;
     background: none;
     font-size: 1.5em;
-    color: #ff9030;
+    
   }
   
   .calendar button:focus {

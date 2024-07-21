@@ -57,7 +57,7 @@ export const Dashb = () => {
 <Container className="my-4">
       <Row>
         <Col xs={12} lg={8}>
-          <h3>Today's Data</h3>
+      
           <Row>
             <Col xs={12} sm={6} md={6} className="mb-4">
               <Card>
@@ -68,8 +68,8 @@ export const Dashb = () => {
                     <Image src={freshtop} style={{width:"100px", height:"100px"}}/> 
                   </Col>
                   <Col className="mt-4">
-                    <p>Successful Inspection</p>
-                    <p>321</p>
+                    <p style={{fontFamily:"SF Pro Display", fontWeight:"700"}}>Successful Inspection</p>
+                    <p style={{fontWeight:"400", fontSize:"28px"}}>321</p>
                   </Col>
                 </Row>
                   </Card.Title>
@@ -86,8 +86,8 @@ export const Dashb = () => {
                     <Image src={x} style={{width:"100px", height:"100px"}}/> 
                   </Col>
                   <Col className="mt-4">
-                    <p>Unsuccessful Inspection</p>
-                    <p>0</p>
+                    <p style={{fontFamily:"SF Pro Display", fontWeight:"700"}}>Unsuccessful Inspection</p>
+                    <p style={{fontWeight:"400", fontSize:"28px"}}>0</p>
                   </Col>
                 </Row>
                 </Card.Title>
