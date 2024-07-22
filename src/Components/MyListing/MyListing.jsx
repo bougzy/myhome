@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Dropdown from 'react-bootstrap/Dropdown';
-import { Container, Row, Col, Card, Form , Button} from 'react-bootstrap';
+import { Container, Row, Col, Card, Form , Button, Image, FormControl} from 'react-bootstrap';
 import firstlistingimage from '../../assets/firstlistingimage.png';
 import pencil from '../../assets/pencil.png'; 
 import secondcardlisting from '../../assets/secondcardlisting.png';
@@ -16,6 +16,9 @@ import sqft from '../../assets/sqft.png';
 import Search from '../../assets/Search.png';
 import dropdown from '../../assets/dropdown.png';
 import sorry from '../../assets/sorry.png';
+import bell from "../../assets/bell.png";
+import profile from '../../assets/profile.png';
+import searchlight from '../../assets/searchlight.png';
 import "./MyListing.css"; 
 
 const listingsContainerOne = [
@@ -108,10 +111,58 @@ const MyListing = () => {
   const currentListings = currentView === 'Approved' ? approvedListings : unapprovedListings;
 
   return (
-    <div style={{marginTop:"70px"}}>
-   
-    <div className="m-2">
-      <div className='approved-unapproved-container mx-2'>
+    <div>
+      <div className="d-block d-md-none bg-white" style={{ height: "62px", width: "400px", marginLeft: "-30px" }}>
+  <Container className="p-3 d-flex align-items-center" style={{ position: 'relative', marginLeft: "10px" }}>
+    <h3 className="flex-grow-1 mt-1" style={{marginLeft:"60px", color:"#FF7B29", fontFamily:"Syne", fontWeight:"700", fontSize:"22px"}}>RealHomes</h3>
+    <div className="d-flex align-items-center">
+      <Image
+        src={bell}
+        className="mr-2 mx-2 mb-2 bell"
+        style={{
+          maxWidth: '15px',
+          maxHeight: '15px'
+        }}
+      />
+      <Image
+        src={profile}
+        className="prof"
+        style={{
+          maxWidth: '35px',
+          maxHeight: '35px',
+          marginRight:"20px"
+        }}
+        roundedCircle
+      />
+    </div>
+  </Container>
+</div>
+
+      <div className="container d-none d-md-block mb-5">
+        <Container className="p-3" style={{ position: 'relative', marginLeft:"-30px" }}>
+          <div className="d-flex align-items-center position-absolute  profile-container">
+            <Image
+              src={bell}
+              className="mr-2 mx-2 mb-4 bell"
+            />
+            <Image
+              src={profile}
+              className="prof"
+              style={{
+                maxWidth: '65px',
+                maxHeight: '65px'
+              }}
+              roundedCircle
+            />
+          </div>
+        </Container>
+      </div>
+
+      <Container>
+        <Row>
+        <Col xs={12} md={6} className="bg-light p-3 d-flex justify-content-between align-items-center">
+        <div className="m-2"> 
+        <div className='approved-unapproved-container mx-2'>
         <h6 
           className={`approved ${currentView === 'Approved' ? 'active' : ''}`} 
           onClick={() => setCurrentView('Approved')}
@@ -133,6 +184,19 @@ const MyListing = () => {
           Unapproved
         </h6>
       </div>  
+      </div>  
+        </Col>
+         <Col xs={12} md={6} className="d-flex flex-column align-items-end mt-4">
+            <Form inline className="mt-2 search search-form search-form-mobile d-flex align-items-center">
+              <FormControl type="text" placeholder="Search" className="search-input" />
+              <Image src={searchlight} className="ml-2" />
+            </Form>
+          </Col>  
+        </Row>
+      </Container>
+   
+    <div className="container me-4">
+    
       
       <h3 className='my-listing mx-3 mt-3'>My Listings</h3>
 

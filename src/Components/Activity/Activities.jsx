@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Table, Row, Col, Card, Form, FormControl, Navbar, Image, Button } from 'react-bootstrap';
 import profile from '../../assets/profile.png';
+import bell from '../../assets/bell.png';
 import searchlight from '../../assets/searchlight.png';
 import Calendar from './Calendar';
 import { FaRegistered } from 'react-icons/fa';
@@ -12,22 +13,51 @@ import { MdMargin } from 'react-icons/md';
 export const Dashb = () => {
   return (
     <div>
-<div className="container" >
-<Container className="p-3" style={{ position: 'relative', marginLeft:"-30px" }}>
+<div className="d-block d-md-none bg-white" style={{ height: "62px", width: "400px", marginLeft: "-30px" }}>
+  <Container className="p-3 d-flex align-items-center" style={{ position: 'relative', marginLeft: "10px" }}>
+    <h3 className="flex-grow-1 mt-1" style={{marginLeft:"60px", color:"#FF7B29", fontFamily:"Syne", fontWeight:"700", fontSize:"22px"}}>RealHomes</h3>
+    <div className="d-flex align-items-center">
       <Image
-      className="position-absolute mt-2 border profile"
-        src={profile}
+        src={bell}
+        className="mr-2 mx-2 mb-2 bell"
         style={{
-          position: '',
-          top: 0,
-          right: 0,
-          maxWidth: '65px',
-          maxHeight: '65px'    
+          maxWidth: '15px',
+          maxHeight: '15px'
+        }}
+      />
+      <Image
+        src={profile}
+        className="prof"
+        style={{
+          maxWidth: '35px',
+          maxHeight: '35px',
+          marginRight:"20px"
         }}
         roundedCircle
       />
-    </Container>
-  </div>
+    </div>
+  </Container>
+</div>
+
+      <div className="container d-none d-md-block">
+        <Container className="p-3" style={{ position: 'relative', marginLeft:"-30px" }}>
+          <div className="d-flex align-items-center position-absolute  profile-container">
+            <Image
+              src={bell}
+              className="mr-2 mx-2 mb-4 bell"
+            />
+            <Image
+              src={profile}
+              className="prof"
+              style={{
+                maxWidth: '65px',
+                maxHeight: '65px'
+              }}
+              roundedCircle
+            />
+          </div>
+        </Container>
+      </div>
 
 <Container className="mt-4">
   <Row>

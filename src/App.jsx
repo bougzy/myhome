@@ -14,6 +14,7 @@ import SavedProfile from './Components/SavedProfile/SavedProfile';
 import Logout from './Components/Logout/Logout';
 import './App.css';  // Import the CSS file
 import { FiAlignJustify } from "react-icons/fi";
+import ham from "./assets/ham.png"
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('Home');
@@ -45,11 +46,11 @@ const App = () => {
   return (
     <Container fluid className="app-container">
       <Button 
-        className="toggle-sidebar-button d-md-none border-0 mx-3" 
+        className="toggle-sidebar-button d-md-none border-0 bg-white" 
         style={{ background: "darkorange" }} 
         onClick={() => setSidebarVisible(!isSidebarVisible)}
       >
-        {isSidebarVisible ? 'X' : <FiAlignJustify />}
+        {isSidebarVisible ? 'X' : <img src={ham} /> }
       </Button>
       <Row>
         <Col md={2} className={`sidebar-column ${isSidebarVisible ? 'd-block' : 'd-none d-md-block'}`}>

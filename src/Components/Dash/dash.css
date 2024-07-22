@@ -1,5 +1,25 @@
 
-  
+.profile-container {
+  margin-left: 91%;
+}
+
+.ml-2 {
+  margin-left: 10px;
+}
+
+
+  .bell{
+    max-width: '30px';
+    max-height:30px;
+  }
+
+  .prof{
+    max-width: '65px';
+    max-height:65px;
+  }
+
+
+
   .search-form {
     width: 100%;
     display: flex;
@@ -16,6 +36,18 @@
 @media (max-width: 768px) {
   .search-form-mobile {
     width: 90% !important;
+  }
+
+  .profile-container {
+    margin-left: 70%;
+    max-width: 10px;
+    
+  }
+
+ 
+  
+  .ml-2 {
+    margin-left: 10px;
   }
 
   .search-form-mobile .search-input {
