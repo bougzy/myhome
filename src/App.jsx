@@ -6,7 +6,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Dashb from './Components/Dash/Dashb';
 import Activities from './Components/Activity/Activities';
-import Security from './Components/Security/Security';
+import Security from "./Components/Security/Security"
 import MyListing from './Components/MyListing/MyListing';
 import AccountSettings from './Components/AccountingSettings/AccountingSettings';
 import Favorites from './Components/Favorites/Favorites';
@@ -61,7 +61,7 @@ const App = () => {
           />
         </Col>
         <Col md={10} className="bg-light content-area">
-          {renderContent()}
+          {renderContent()} 
         </Col>
       </Row>
     </Container>
