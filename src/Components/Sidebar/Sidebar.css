@@ -19,6 +19,33 @@
     color: white !important;
   }
   
+
+
+  .sidebar .list-group-item {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar .list-group-item.active {
+  background-color: #FF8844; /* Background color for active item */
+  color: white; /* Text color for active item */
+}
+
+.sidebar .list-group-item.active .icon {
+  color: white; /* Icon color for active item */
+}
+
+.sidebar .list-group-item .icon {
+  color: #87888C; /* Default icon color */
+  transition: color 0.3s ease;
+}
+
+
+
   /* Mobile view sidebar styles */
   @media (max-width: 768px) {
     .sidebar {
@@ -40,3 +67,4 @@
     }
   }
   
+
