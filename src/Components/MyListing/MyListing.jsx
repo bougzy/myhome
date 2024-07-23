@@ -312,7 +312,7 @@ const MyListing = () => {
             <div className="listing-details mt-3">
               <div className="listing-detail-item">
                 <img src={bed} alt="bed icon" />
-                <span>{listing.bed}</span>
+                <span className="">{listing.bed}</span>
               </div>
               <div className="listing-detail-item">
                 <img src={room} alt="room icon" />
@@ -386,10 +386,12 @@ const MyListing = () => {
           <div className='card-text'>
             Block 45, Rockvale manors, Apo, Abuja
           </div>
+
+          <div className="">
           <div className="listing-details mt-3">
             <div className="listing-detail-item">
-              <img src={bed} alt="bed icon" />
-              3 beds
+
+              30 beds
             </div>
             <div className="listing-detail-item">
               <img src={room} alt="room icon" />
@@ -404,6 +406,8 @@ const MyListing = () => {
               120sqft
             </div>
           </div>
+          </div>
+
         </div>
       </Card>
     </Col>
