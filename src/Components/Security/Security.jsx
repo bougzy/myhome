@@ -71,12 +71,30 @@ const Security = () => {
      </Row>
    </Container>
 
+<Form className='mt-5'>
+  <div className="d-block d-sm-none">
+  <Form.Group className="mb-3 position-relative custom-form-group" controlId="exampleForm.ControlInput1" style={{padding:""}} >
+    <Form.Control
+      type="email"
+      placeholder="verify your email address linked to your account"
+      className="custom-inputs"
+      style={{ outline: 'none', boxShadow: 'none', borderColor: 'none' }}
+    />
+    <div className="position-absolute d-flex flex-column flex-md-row align-items-start align-items-md-center custom-content" style={{ top: '40%', transform: 'translateY(-50%)', right: '10px' }}>
+      <div>
+        <div className="me-md-5 mt-4 na" style={{ fontSize: '0.875rem' }}>igorfriday@gmail.org</div>
+      </div>
+      <div className="d-flex">
+        <div className="me-md-5 text-danger" style={{ fontSize: '0.875rem' }}>unverified</div>
+         <h1 className="edit mx-2 mb-4 mt-md-0 verify" style={{ fontSize: '1rem' }}>verify</h1>
+      </div>
+    </div>
+    <Form.Label className="custom-placeholder-labels mt-2">Verify Email</Form.Label>
+  </Form.Group>
+  </div>
 
-
-{/* <h3 className='my-listing mx-3' style={{marginTop:"70px"}}>Sign in & Security</h3> */}
-
-{/* <Form className='mt-5'>
-<Form.Group className="mb-3 position-relative custom-form-group" controlId="exampleForm.ControlInput1">
+  <div className="d-none d-sm-block">
+  <Form.Group className="mb-3 position-relative custom-form-group" controlId="exampleForm.ControlInput1">
 <Form.Control
  type="email"
  placeholder="verify your email address linked to your account"
@@ -92,97 +110,7 @@ const Security = () => {
 </div>
 <Form.Label className="custom-placeholder-labels mt-2">Verify Email</Form.Label>
 </Form.Group>
-
-   <Form.Group className="mb-3 position-relative" controlId="exampleForm.ControlInput2">
-     <Form.Control
-       type="password"
-       placeholder="set a unique password to protect your account"
-       className="custom-inputs"
-       style={{ outline: 'none', boxShadow: 'none', borderColor: 'none' }}
-     />
-     <div className="position-absolute d-flex align-items-center" style={{ top: '50%', transform: 'translateY(-50%)', right: '20px' }}>
-       <div className="me-2 na"></div>
-       <h1 className='edit mt-2'>create password</h1>
-     </div>
-     <Form.Label className="custom-placeholder-labels">Password</Form.Label>
-   </Form.Group>
-
-   <Form.Group className="mb-3 position-relative" controlId="exampleForm.ControlInput3">
-     <Form.Control
-       type="text"
-       placeholder="make your account extra secure"
-       className="custom-inputs"
-       style={{ outline: 'none', boxShadow: 'none', borderColor: 'none' }} 
-     />
-     <div className="position-absolute d-flex align-items-center" style={{ top: '50%', transform: 'translateY(-50%)', right: '20px' }}>
-       <div className="me-2 na"></div>
-       <h1 className='edit mt-2'>enable</h1>
-     </div>
-     <Form.Label className="custom-placeholder-labels">2-step verification</Form.Label>
-   </Form.Group>
-
-   <Form.Group className="mb-3 position-relative" controlId="exampleForm.ControlInput4">
-     <Form.Control
-       type="number"
-       placeholder="Link your google account to REALHOMES"
-       className="custom-inputs"
-       style={{ outline: 'none', boxShadow: 'none', borderColor: 'none' }} 
-     />
-     <div className="position-absolute d-flex align-items-center" style={{ top: '50%', transform: 'translateY(-50%)', right: '20px' }}>
-       <div className="me-2 na"></div>
-       <h1 className='edit mt-2'>unlink</h1>
-     </div>
-     <Form.Label className="custom-placeholder-labels">Google sign in</Form.Label>
-   </Form.Group>
-
-   <h3 className='my-listing mx-3 mt-5'>Manage account</h3>
-
-   <Form.Group className="mb-3 position-relative" controlId="exampleForm.ControlInput5">
-     <Form.Control
-       type="text"
-       placeholder="this will shut down your account, but retain your information"
-       className="custom-inputs"
-       style={{ outline: 'none', boxShadow: 'none', borderColor: 'none' }} 
-     />
-     <div className="position-absolute d-flex align-items-center" style={{ top: '50%', transform: 'translateY(-50%)', right: '20px' }}>
-       <div className="me-2 na"></div>
-       <h1 className='edit mt-3'>Deactivate account</h1>
-     </div>
-     <Form.Label className="custom-placeholder-labels">Deactivate account</Form.Label>
-   </Form.Group>
-
-   <Form.Group style={{marginBottom:"180px"}} className="position-relative" controlId="exampleForm.ControlInput6">
-     <Form.Control
-       type="number"
-       placeholder="this will shut down your account, but retain your information"
-       className="custom-inputs "
-       style={{ outline: 'none', boxShadow: 'none', borderColor: 'none' }}
-     />
-     <div className="position-absolute d-flex align-items-center" style={{ top: '50%', transform: 'translateY(-50%)', right: '20px' }}>
-       <div className="me-2 na"></div>
-       <h1 className='edit mt-3'>Go to privacy portal</h1>
-     </div>
-     <Form.Label className="custom-placeholder-labels">Privacy & Cookies</Form.Label>
-   </Form.Group>
- </Form> */}
-
-<Form className='mt-5'>
-  <Form.Group className="mb-3 position-relative custom-form-group" controlId="exampleForm.ControlInput1">
-    <Form.Control
-      type="email"
-      placeholder="verify your email address linked to your account"
-      className="custom-inputs"
-      style={{ outline: 'none', boxShadow: 'none', borderColor: 'none' }}
-    />
-    <div className="position-absolute d-flex flex-column flex-md-row align-items-start align-items-md-center custom-content" style={{ top: '40%', transform: 'translateY(-50%)', right: '10px' }}>
-      <div>
-        <div className="me-md-5 mt-4 na" style={{ fontSize: '0.875rem' }}>igorfriday@gmail.org</div>
-        <div className="me-md-5 text-danger" style={{ fontSize: '0.875rem' }}>unverified</div>
-      </div>
-      <h1 className="edit  mt-md-0 " style={{ fontSize: '1rem' }}>verify</h1>
-    </div>
-    <Form.Label className="custom-placeholder-labels mt-2">Verify Email</Form.Label>
-  </Form.Group>
+  </div>
 
   <Form.Group className="mb-3 position-relative" controlId="exampleForm.ControlInput2">
     <Form.Control
@@ -267,6 +195,12 @@ const Security = () => {
     .edit {
       font-size: 1rem;
     }
+     
+
+      .r{
+      margin-top:-2px;  
+      }
+
     .custom-form-group .na, .custom-form-group .text-danger {
       font-size: 1.75rem;
       font-weight: 700
