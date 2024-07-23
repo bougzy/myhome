@@ -14,7 +14,7 @@
   text-align: center;
 }
 
-.calendar .date {
+/* .calendar .date {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -23,7 +23,7 @@
   transition: background-color 0.3s;
   font-weight: 700;
   margin: 2px;
-}
+} */
 
 /*
 .calendar .date {
