@@ -1,3 +1,5 @@
+/* Calendar.css */
+
 .calendar {
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -6,7 +8,6 @@
   max-width: 100%;
 }
 
- 
 .calendar h3 {
   font-family: 'kufam';
   color: #20335b;
@@ -14,83 +15,13 @@
   text-align: center;
 }
 
-/* .calendar .date {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  border-radius: 35%;
-  transition: background-color 0.3s;
-  font-weight: 700;
-  margin: 2px;
-} */
-
-/*
-.calendar .date {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  border-radius: 35%;
-  transition: background-color 0.3s;
-  font-weight: 700;
-  margin: 2px;
+/* New CSS for day names */
+.day-names strong {
+  font-size: 20px; 
 }
 
-.calendar .date.active {
-  background-color: #ff9030;
-  color: white;
-}
-
-.calendar .date:hover {
-  cursor: pointer;
-  background-color: #ffad66;
-}
-
-.calendar button {
-  border: none;
-  background: none;
-  font-size: 1.5em;
-}
-
-.calendar button:focus {
-  outline: none;
-}
-
-@media (max-width: 768px) {
-  .calendar {
-    padding: 10px;
-  }
-
-  .calendar h3 {
-    font-size: 1.2em;
-  }
-
-  .calendar .date {
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 0.9em;
+@media (max-width: 767px) {
+  .day-names strong {
+    font-size: 13px; /* Adjust the font size for smaller screens */
   }
 }
-
-@media (max-width: 576px) {
-  .calendar {
-    padding: 5px;
-  }
-
-  .calendar h3 {
-    font-size: 1em;
-  }
-
-  .calendar .date {
-    width: 18px;
-    height: 20px;
-    line-height: 20px;
-    font-size: 0.8em;
-  }
-
-  .calendar .day-names {
-    font-size: 12px;
-  }
-} */
