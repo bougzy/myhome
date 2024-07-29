@@ -111,7 +111,7 @@ const MyListing = () => {
   const currentListings = currentView === 'Approved' ? approvedListings : unapprovedListings;
 
   return (
-    <div>
+    <div style={{marginTop:"-1px", marginBottom:"180px"}}> 
       <div className="d-block d-md-none bg-white" style={{ height: "62px", width: "400px", marginLeft: "-30px" }}>
   <Container className="p-3  d-flex align-items-center" style={{ position: 'relative', marginLeft: "10px" }}>
     <h3 className="flex-grow-1 mt-1" style={{marginLeft:"60px", color:"#FF7B29", fontFamily:"Syne", fontWeight:"700", fontSize:"22px"}}>RealHomes</h3>
