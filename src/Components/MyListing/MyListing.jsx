@@ -113,7 +113,7 @@ const MyListing = () => {
   return (
     <div>
       <div className="d-block d-md-none bg-white" style={{ height: "62px", width: "400px", marginLeft: "-30px" }}>
-  <Container className="p-3 d-flex align-items-center" style={{ position: 'relative', marginLeft: "10px" }}>
+  <Container className="p-3  d-flex align-items-center" style={{ position: 'relative', marginLeft: "10px" }}>
     <h3 className="flex-grow-1 mt-1" style={{marginLeft:"60px", color:"#FF7B29", fontFamily:"Syne", fontWeight:"700", fontSize:"22px"}}>RealHomes</h3>
     <div className="d-flex align-items-center">
       <Image
@@ -299,7 +299,7 @@ const MyListing = () => {
 
         {/* approved card section */}
       {currentListings.length > 0 ? (
-      <Container className="listings-container mt-3">
+      <div className="listings-container mt-3">
       <Row>
         {currentListings.slice(0, 3).map((listing, index) => (
         <Col key={index} xs={12} md={6} lg={4} className='mb-3'>
@@ -368,7 +368,7 @@ const MyListing = () => {
           </Col>
         ))}
       </Row>
-    </Container>
+    </div>
     
       ) : (
 
