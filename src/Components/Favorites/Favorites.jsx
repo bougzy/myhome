@@ -271,10 +271,11 @@ const Favorites = () => {
       </div>
 
 
-      <Animation animationClass="animate__slideInRight" delay={200}>
+      
       <Container className='mt-3'>
   <Row>
     <Col className='mb-5'>
+    <Animation animationClass="animate__slideInRight" delay={200}> 
       <Card border='light' bg='light' className="">
         <img src={firstlistingimage} alt="card-image" className="" />
         <button className='custom-button'>SELL</button>
@@ -303,10 +304,12 @@ const Favorites = () => {
           </div>
         </div>
       </Card>
+      </Animation>
     </Col>
 
 
     <Col className='mb-5'>
+    <Animation animationClass="animate__slideInLeft" delay={200}>
       <Card border='light' bg='light' className="">
         <img src={secondcardlisting} alt="card-image" className="" />
            <button className='custom-button'>SELL</button>
@@ -335,9 +338,11 @@ const Favorites = () => {
           </div>
         </div>
       </Card>
+    </Animation>
     </Col>
 
     <Col className='mb-5'>
+    <Animation animationClass="animate__slideInRight" delay={200}>
       <Card border='light' bg='light' className="">
         <img src={thirdcardlisting} alt="card-image" className="" />
           <button className='custom-button'>SELL</button>
@@ -366,11 +371,12 @@ const Favorites = () => {
           </div>
         </div>
       </Card>
+    </Animation>
     </Col>
   </Row>
-
   <Row>
     <Col className='mb-5'>
+    <Animation animationClass="animate__slideInRight" delay={200}> 
       <Card border='light' bg='light' className="">
         <img src={firstlistingimage} alt="card-image" className="" />
         <button className='custom-button'>SELL</button>
@@ -399,10 +405,12 @@ const Favorites = () => {
           </div>
         </div>
       </Card>
+      </Animation>
     </Col>
 
 
     <Col className='mb-5'>
+    <Animation animationClass="animate__slideInLeft" delay={200}>
       <Card border='light' bg='light' className="">
         <img src={secondcardlisting} alt="card-image" className="" />
            <button className='custom-button'>SELL</button>
@@ -431,9 +439,11 @@ const Favorites = () => {
           </div>
         </div>
       </Card>
+    </Animation>
     </Col>
 
-    <Col style={{marginBottom:"180px"}}>
+    <Col className='mb-5'>
+    <Animation animationClass="animate__slideInRight" delay={200}>
       <Card border='light' bg='light' className="">
         <img src={thirdcardlisting} alt="card-image" className="" />
           <button className='custom-button'>SELL</button>
@@ -462,10 +472,11 @@ const Favorites = () => {
           </div>
         </div>
       </Card>
+    </Animation>
     </Col>
   </Row>
+
 </Container>
-    </Animation>
     </div>
     
   )

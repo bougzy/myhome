@@ -185,7 +185,7 @@ export const Dashb = () => {
     
     
   <Container className="mt-3" style={{marginBottom:"180px"}}>
-  <Animation animationClass="animate__slideInRight" delay={500}>
+  <Animation animationClass="animate__slideInRight" delay={200}>
       <Row>
         <Col xs="12" lg="12" className=""> {/* Center the column within the container */}
           <div className="m-3">

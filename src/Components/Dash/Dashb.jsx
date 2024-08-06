@@ -64,7 +64,7 @@ export const Dashb = () => {
         </Container>
       </div>
 
-      <Animation animationClass="animate__slideInLeft" delay={500}>
+      <Animation animationClass="animate__slideInLeft" delay={200}>
       <Container className="mt-5">
         <Row>
           <Col xs={12} md={6} className="bg-light p-3 d-flex justify-content-between align-items-center">
@@ -87,7 +87,7 @@ export const Dashb = () => {
         <Row>
           <Col xs={12} lg={8}>
             <h3>Today's Data</h3>
-            <Animation animationClass="animate__slideInRight" delay={500}>
+            <Animation animationClass="animate__slideInRight" delay={200}>
             <Row>
               <Col xs={12} sm={6} md={3} className="mb-4">
                 <Card className="border-0 rounded-4">
@@ -134,7 +134,7 @@ export const Dashb = () => {
            
           
 
-            <Animation animationClass="animate__slideInRight" delay={500}>
+            <Animation animationClass="animate__slideInRight" delay={200}>
             <h3 className="mt-5">Next Inspection</h3>
             <div className="table-responsive rounded-4">
               <Table hover className="bg-white no-borders text-center custom-table">
@@ -193,7 +193,7 @@ export const Dashb = () => {
         </Row>
       </Container>
 
-      <Animation animationClass="animate__slideInLeft" delay={500}> 
+      <Animation animationClass="animate__slideInLeft" delay={200}> 
       <Container>
         <SalesChart />
       </Container>

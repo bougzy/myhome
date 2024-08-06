@@ -447,7 +447,7 @@ const MyListing = () => {
     </Animation>
     </Col>
     <Col className='mb-5'>
-    <Animation animationClass="animate__fadeInDownBig" delay={2000}>
+    <Animation animationClass="animate__slideInRight" delay={200}>
       <Card border='light' bg='light' className="">
         <img src={thirdcardlisting} alt="card-image" className="" />
         <button className='unapproved-button'>UNAPPROVED</button>
@@ -482,6 +482,7 @@ const MyListing = () => {
 
   <Row className=''>
     <Col className='mb-5'>
+    <Animation animationClass="animate__bounceIn" delay={200}>
       <Card border='light' bg='light' className="">
         <img src={fourthcardlisting} alt="card-image" className="" />
         <button className='unapproved-button'>UNAPPROVED</button>
@@ -510,8 +511,10 @@ const MyListing = () => {
           </div>
         </div>
       </Card>
+      </Animation>
     </Col>
     <Col className='mb-5'>
+    <Animation animationClass="animate__slideInRight" delay={200}>
       <Card border='light' bg='light' className="">
         <img src={fifthcardlisting} alt="card-image" className="" />
         <button className='unapproved-button'>UNAPPROVED</button>
@@ -540,8 +543,10 @@ const MyListing = () => {
           </div>
         </div>
       </Card>
+      </Animation>
     </Col>
     <Col style={{marginBottom:"180px"}}>
+    <Animation animationClass="animate__slideInRight" delay={200}>
       <Card border='light' bg='light' className="">
         <img src={thirdcardlisting} alt="card-image" className="" />
         <button className='unapproved-button'>UNAPPROVED</button>
@@ -570,6 +575,7 @@ const MyListing = () => {
           </div>
         </div>
       </Card>
+      </Animation>
     </Col>
   </Row>
 </Container>
