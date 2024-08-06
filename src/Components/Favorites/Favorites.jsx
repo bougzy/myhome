@@ -271,7 +271,7 @@ const Favorites = () => {
       </div>
 
 
-      <Animation animationClass="animate__fadeInDownBig" delay={2000}>
+      <Animation animationClass="animate__slideInRight" delay={200}>
       <Container className='mt-3'>
   <Row>
     <Col className='mb-5'>

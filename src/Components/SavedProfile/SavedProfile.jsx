@@ -62,6 +62,7 @@ const SavedProfile = () => {
       </div>
 
       <Container>
+      <Animation animationClass="animate__slideInRight" delay={200}>
         <Row>
         <Col xs={12} md={6} className="bg-light p-3 d-flex justify-content-between align-items-center">
         <div className="m-2"> 
@@ -75,11 +76,12 @@ const SavedProfile = () => {
             </Form>
           </Col>  
         </Row>
+      </Animation>
       </Container>
 
 
 <div className='mt-3'>
-<Animation animationClass="animate__fadeInDownBig" delay={2000}>
+<Animation animationClass="animate__slideInLeft" delay={200}>
   <Card body border='light' bg='' className='p-2'>
     <div className="profile-containers">
       <div>
