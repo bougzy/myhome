@@ -20,6 +20,7 @@ import bell from "../../assets/bell.png";
 import profile from '../../assets/profile.png';
 import searchlight from '../../assets/searchlight.png';
 import "./MyListing.css"; 
+import Animation from '../Animation';
 
 const listingsContainerOne = [
   {
@@ -113,6 +114,7 @@ const MyListing = () => {
   return (
     <div style={{marginTop:"-1px", marginBottom:"180px"}}> 
       <div className="d-block d-md-none bg-white" style={{ height: "62px", width: "400px", marginLeft: "-30px" }}>
+     <Animation animationClass="animate__fadeInDownBig" delay={2000}>
   <Container className="p-3  d-flex align-items-center" style={{ position: 'relative', marginLeft: "10px" }}>
     <h3 className="flex-grow-1 mt-1" style={{marginLeft:"60px", color:"#FF7B29", fontFamily:"Syne", fontWeight:"700", fontSize:"22px"}}>RealHomes</h3>
     <div className="d-flex align-items-center">
@@ -136,6 +138,7 @@ const MyListing = () => {
       />
     </div>
   </Container>
+  </Animation>
 </div>
 
       <div className="container d-none d-md-block mb-5">
@@ -412,6 +415,7 @@ const MyListing = () => {
       </Card>
     </Col>
     <Col className='mb-5'>
+    <Animation animationClass="animate__fadeInDownBig" delay={2000}>
       <Card border='light' bg='light' className="">
         <img src={secondcardlisting} alt="card-image" className="" />
         <button className='unapproved-button'>UNAPPROVED</button>
@@ -440,8 +444,10 @@ const MyListing = () => {
           </div>
         </div>
       </Card>
+    </Animation>
     </Col>
     <Col className='mb-5'>
+    <Animation animationClass="animate__fadeInDownBig" delay={2000}>
       <Card border='light' bg='light' className="">
         <img src={thirdcardlisting} alt="card-image" className="" />
         <button className='unapproved-button'>UNAPPROVED</button>
@@ -470,6 +476,7 @@ const MyListing = () => {
           </div>
         </div>
       </Card>
+    </Animation>
     </Col>
   </Row>
 

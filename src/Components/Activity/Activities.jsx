@@ -9,6 +9,7 @@ import freshtop from "../../assets/freshtop.png"
 import x from "../../assets/x.png"
 import './Activities.css'; 
 import { MdMargin } from 'react-icons/md';
+import Animation from '../Animation';
 
 export const Dashb = () => {
   return (
@@ -84,7 +85,8 @@ export const Dashb = () => {
 </Container>
 
 
-<Container className="my-4">
+   <Container className="my-4">
+   <Animation animationClass="animate__slideInRight" delay={2000}>
       <Row>
         <Col xs={12} lg={8}>
       
@@ -176,12 +178,14 @@ export const Dashb = () => {
           <Calendar/>
         </Col>
       </Row>
+      </Animation>
     </Container>
 
 
     
     
-<Container className="mt-3" style={{marginBottom:"180px"}}>
+  <Container className="mt-3" style={{marginBottom:"180px"}}>
+  <Animation animationClass="animate__slideInRight" delay={2000}>
       <Row>
         <Col xs="12" lg="12" className=""> {/* Center the column within the container */}
           <div className="m-3">
@@ -245,6 +249,7 @@ export const Dashb = () => {
           </div>
         </Col>
       </Row>
+      </Animation>
     </Container>
 
 

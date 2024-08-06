@@ -12,10 +12,12 @@ import bell from "../../assets/bell.png";
 import LineChart from './LineChart';
 import SalesChart from './SalesChart';
 import "./dash.css";
+import Animation from '../Animation';
 
 export const Dashb = () => {
   return (
     <div>
+      
       <div className="d-block d-md-none bg-white" style={{ height: "62px", width: "400px", marginLeft: "-30px" }}>
   <Container className="p-3 d-flex align-items-center" style={{ position: 'relative', marginLeft: "10px" }}>
     <h3 className="flex-grow-1 mt-1" style={{marginLeft:"60px", color:"#FF7B29", fontFamily:"Syne", fontWeight:"700", fontSize:"22px"}}>RealHomes</h3>
@@ -83,6 +85,7 @@ export const Dashb = () => {
         <Row>
           <Col xs={12} lg={8}>
             <h3>Today's Data</h3>
+            <Animation animationClass="animate__fadeInDownBig" delay={2000}>
             <Row>
               <Col xs={12} sm={6} md={3} className="mb-4">
                 <Card className="border-0 rounded-4">
@@ -125,7 +128,11 @@ export const Dashb = () => {
                 </Card>
               </Col>
             </Row>
+              </Animation>
+           
+          
 
+            <Animation animationClass="animate__slideInRight" delay={2000}>
             <h3 className="mt-5">Next Inspection</h3>
             <div className="table-responsive rounded-4">
               <Table hover className="bg-white no-borders text-center custom-table">
@@ -173,8 +180,9 @@ export const Dashb = () => {
                 </tbody>
               </Table>
             </div>
+            </Animation>
           </Col>
-
+              
           <Col xs={12} lg={4} className="mt-4">
             <Card.Body>
               <LineChart />
@@ -183,11 +191,15 @@ export const Dashb = () => {
         </Row>
       </Container>
 
+      <Animation animationClass="animate__slideInLeft" delay={1000}> 
       <Container>
         <SalesChart />
       </Container>
+      </Animation>
     </div>
   );
 }
 
 export default Dashb;
+
+

@@ -9,6 +9,7 @@ import "./savedprofile.css";
 import bell from "../../assets/bell.png";
 import profile from '../../assets/profile.png';
 import searchlight from '../../assets/searchlight.png';
+import Animation from '../Animation';
 
 
 const SavedProfile = () => {
@@ -78,6 +79,7 @@ const SavedProfile = () => {
 
 
 <div className='mt-3'>
+<Animation animationClass="animate__fadeInDownBig" delay={2000}>
   <Card body border='light' bg='' className='p-2'>
     <div className="profile-containers">
       <div>
@@ -180,6 +182,7 @@ const SavedProfile = () => {
       </div>
     </div>
   </Card>
+</Animation>
 </div>
 
       </div>

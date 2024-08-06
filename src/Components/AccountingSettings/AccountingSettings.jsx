@@ -8,7 +8,7 @@ import bell from "../../assets/bell.png";
 import profile from '../../assets/profile.png';
 import searchlight from '../../assets/searchlight.png';
 import Form from 'react-bootstrap/Form';
-
+import Animation from '../Animation';
 import secondcardlisting from '../../assets/secondcardlisting.png';
 
 const MyListing = () => {
@@ -22,6 +22,7 @@ const MyListing = () => {
 
   return (
     <div style={{marginTop:"-1px", marginBottom:"180px"}}> 
+    <Animation animationClass="animate__slideInRight" delay={2000}>
      <div className="d-block d-md-none bg-white" style={{ height: "62px", width: "400px", marginLeft: "-30px" }}>
   <Container className="p-3 d-flex align-items-center" style={{ position: 'relative', marginLeft: "10px" }}>
     <h3 className="flex-grow-1 mt-1" style={{marginLeft:"60px", color:"#FF7B29", fontFamily:"Syne", fontWeight:"700", fontSize:"22px"}}>RealHomes</h3>
@@ -491,6 +492,7 @@ const MyListing = () => {
         </Container>
       </div>
     </div>
+    </Animation>
     </div>
   );
 };
