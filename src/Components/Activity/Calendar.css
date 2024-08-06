@@ -20,8 +20,40 @@
   font-size: 20px; 
 }
 
-@media (max-width: 767px) {
-  .day-names strong {
-    font-size: 13px; /* Adjust the font size for smaller screens */
+@media (max-width: 768px) {
+  .calendar {
+    padding: 10px;
+  }
+
+  .calendar h3 {
+    font-size: 1.2em;
+  }
+
+  .calendar .date {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 0.9em;
   }
 }
+
+@media (max-width: 576px) {
+  .calendar {
+    padding: 5px;
+  }
+
+  .calendar h3 {
+    font-size: 1em;
+  }
+
+  .calendar .date {
+    width: 18px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 0.8em;
+  }
+
+  .calendar .day-names {
+    font-size: 12px;
+  }
+} */
