@@ -157,7 +157,6 @@ const Security = () => {
   </Form.Group>
 
   <h3 className='my-listing mx-3 mt-5'>Manage account</h3>
-
   <Form.Group className="mb-3 position-relative" controlId="exampleForm.ControlInput5">
     <Form.Control
       type="text"
