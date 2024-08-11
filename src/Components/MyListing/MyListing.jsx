@@ -21,6 +21,7 @@ import profile from '../../assets/profile.png';
 import searchlight from '../../assets/searchlight.png';
 import "./MyListing.css"; 
 import Animation from '../Animation';
+import Listing from "./Listing"
 
 const listingsContainerOne = [
   {
@@ -422,37 +423,7 @@ const MyListing = () => {
     </Animation>
     </Col>
     <Col className='mb-5'>
-    {/* <Animation animationClass="animate__slideInLeft" delay={100}>
-      <Card border='light' bg='light' className="">
-        <img src={secondcardlisting} alt="card-image" className="" />
-        <button className='unapproved-button'>UNAPPROVED</button>
-        <div className='card-body'>
-          <h3 className='card-price'>$148,000</h3>
-          <div className='card-text'>
-            Block 45, Rockvale manors, Apo, Abuja
-          </div>
-          <div className="listing-details mt-3">
-            <div className="listing-detail-item">
-              <img src={bed} alt="bed icon" />
-              3 beds
-            </div>
-            <div className="listing-detail-item">
-              <img src={room} alt="room icon" />
-              2 Rooms
-            </div>
-            <div className="listing-detail-item">
-              <img src={bath} alt="bath icon" />
-              2 Baths
-            </div>
-            <div className="listing-detail-item">
-              <img src={sqft} alt="sqft icon" />
-              120sqft
-            </div>
-          </div>
-        </div>
-      </Card>
-    </Animation> */}
-
+   
 <Animation animationClass="animate__slideInLeft" delay={100}>
       <Card border='light' bg='light' className="">
         <img src={secondcardlisting} alt="card-image" className="" />
@@ -490,36 +461,6 @@ const MyListing = () => {
 
     </Col>
     <Col className='mb-5'>
-    {/* <Animation animationClass="animate__slideInRight" delay={100}>
-      <Card border='light' bg='light' className="">
-        <img src={thirdcardlisting} alt="card-image" className="" />
-        <button className='unapproved-button'>UNAPPROVED</button>
-        <div className='card-body'>
-          <h3 className='card-price m-1 p-1'>$148,000</h3>
-          <div className='card-text m-1 p-1'>
-            Block 45, Rockvale manors, Apo, Abuja
-          </div>
-          <div className="listing-details mt-3">
-            <div className="listing-detail-item">
-              <img src={bed} alt="bed icon" />
-              3 beds
-            </div>
-            <div className="listing-detail-item">
-              <img src={room} alt="room icon" />
-              2 Rooms
-            </div>
-            <div className="listing-detail-item">
-              <img src={bath} alt="bath icon" />
-              2 Baths
-            </div>
-            <div className="listing-detail-item">
-              <img src={sqft} alt="sqft icon" />
-              120sqft
-            </div>
-          </div>
-        </div>
-      </Card>
-    </Animation> */}
     <Animation animationClass="animate__slideInLeft" delay={100}>
       <Card border='light' bg='light' className="">
         <img src={thirdcardlisting} alt="card-image" className="" />
@@ -594,36 +535,7 @@ const MyListing = () => {
     </Animation>
     </Col>
     <Col className='mb-5'>
-    {/* <Animation animationClass="animate__slideInLeft" delay={100}>
-      <Card border='light' bg='light' className="">
-        <img src={secondcardlisting} alt="card-image" className="" />
-        <button className='unapproved-button'>UNAPPROVED</button>
-        <div className='card-body'>
-          <h3 className='card-price'>$148,000</h3>
-          <div className='card-text'>
-            Block 45, Rockvale manors, Apo, Abuja
-          </div>
-          <div className="listing-details mt-3">
-            <div className="listing-detail-item">
-              <img src={bed} alt="bed icon" />
-              3 beds
-            </div>
-            <div className="listing-detail-item">
-              <img src={room} alt="room icon" />
-              2 Rooms
-            </div>
-            <div className="listing-detail-item">
-              <img src={bath} alt="bath icon" />
-              2 Baths
-            </div>
-            <div className="listing-detail-item">
-              <img src={sqft} alt="sqft icon" />
-              120sqft
-            </div>
-          </div>
-        </div>
-      </Card>
-    </Animation> */}
+    
 
 <Animation animationClass="animate__slideInLeft" delay={100}>
       <Card border='light' bg='light' className="">
@@ -662,36 +574,6 @@ const MyListing = () => {
 
     </Col>
     <Col className='mb-5'>
-    {/* <Animation animationClass="animate__slideInRight" delay={100}>
-      <Card border='light' bg='light' className="">
-        <img src={thirdcardlisting} alt="card-image" className="" />
-        <button className='unapproved-button'>UNAPPROVED</button>
-        <div className='card-body'>
-          <h3 className='card-price m-1 p-1'>$148,000</h3>
-          <div className='card-text m-1 p-1'>
-            Block 45, Rockvale manors, Apo, Abuja
-          </div>
-          <div className="listing-details mt-3">
-            <div className="listing-detail-item">
-              <img src={bed} alt="bed icon" />
-              3 beds
-            </div>
-            <div className="listing-detail-item">
-              <img src={room} alt="room icon" />
-              2 Rooms
-            </div>
-            <div className="listing-detail-item">
-              <img src={bath} alt="bath icon" />
-              2 Baths
-            </div>
-            <div className="listing-detail-item">
-              <img src={sqft} alt="sqft icon" />
-              120sqft
-            </div>
-          </div>
-        </div>
-      </Card>
-    </Animation> */}
     <Animation animationClass="animate__slideInLeft" delay={100}>
       <Card border='light' bg='light' className="">
         <img src={thirdcardlisting} alt="card-image" className="" />
@@ -728,105 +610,6 @@ const MyListing = () => {
     </Animation>
     </Col>
   </Row>
-
-  {/* <Row className=''>
-    <Col className='mb-5'>
-    <Animation animationClass="animate__slideInLeft" delay={200}>
-      <Card border='light' bg='light' className="">
-        <img src={fourthcardlisting} alt="card-image" className="" />
-        <button className='unapproved-button'>UNAPPROVED</button>
-        <div className='card-body'>
-          <h3 className='card-price m-1 p-1'>$148,000</h3>
-          <div className='card-text m-1 p-1'>
-            Block 45, Rockvale manors, Apo, Abuja
-          </div>
-          <div className="listing-details mt-3">
-            <div className="listing-detail-item">
-              <img src={bed} alt="bed icon" />
-              3 beds
-            </div>
-            <div className="listing-detail-item">
-              <img src={room} alt="room icon" />
-              2 Rooms
-            </div>
-            <div className="listing-detail-item">
-              <img src={bath} alt="bath icon" />
-              2 Baths
-            </div>
-            <div className="listing-detail-item">
-              <img src={sqft} alt="sqft icon" />
-              120sqft
-            </div>
-          </div>
-        </div>
-      </Card>
-      </Animation>
-    </Col>
-    <Col className='mb-5'>
-    <Animation animationClass="animate__slideInRight" delay={200}>
-      <Card border='light' bg='light' className="">
-        <img src={fifthcardlisting} alt="card-image" className="" />
-        <button className='unapproved-button'>UNAPPROVED</button>
-        <div className='card-body'>
-          <h3 className='card-price m-1 p-1'>$148,000</h3>
-          <div className='card-text m-1 p-1'>
-            Block 45, Rockvale manors, Apo, Abuja
-          </div>
-          <div className="listing-details mt-3">
-            <div className="listing-detail-item">
-              <img src={bed} alt="bed icon" />
-              3 beds
-            </div>
-            <div className="listing-detail-item">
-              <img src={room} alt="room icon" />
-              2 Rooms
-            </div>
-            <div className="listing-detail-item">
-              <img src={bath} alt="bath icon" />
-              2 Baths
-            </div>
-            <div className="listing-detail-item">
-              <img src={sqft} alt="sqft icon" />
-              120sqft
-            </div>
-          </div>
-        </div>
-      </Card>
-      </Animation>
-    </Col>
-    <Col style={{marginBottom:"180px"}}>
-    <Animation animationClass="animate__slideInLeftt" delay={200}>
-      <Card border='light' bg='light' className="">
-        <img src={thirdcardlisting} alt="card-image" className="" />
-        <button className='unapproved-button'>UNAPPROVED</button>
-        <div className='card-body'>
-          <h3 className='card-price m-1 p-1'>$148,000</h3>
-          <div className='card-text m-1 p-1'>
-            Block 45, Rockvale manors, Apo, Abuja
-          </div>
-          <div className="listing-details mt-3">
-            <div className="listing-detail-item">
-              <img src={bed} alt="bed icon" />
-              3 beds
-            </div>
-            <div className="listing-detail-item">
-              <img src={room} alt="room icon" />
-              2 Rooms
-            </div>
-            <div className="listing-detail-item">
-              <img src={bath} alt="bath icon" />
-              2 Baths
-            </div>
-            <div className="listing-detail-item">
-              <img src={sqft} alt="sqft icon" />
-              120sqft
-            </div>
-          </div>
-        </div>
-      </Card>
-      </Animation>
-    </Col>
-  </Row> */}
 </Container>
 
 
@@ -836,6 +619,7 @@ const MyListing = () => {
       )}
       <button className='fixed-add-list-button'>Add Listing</button>
     </div>
+    <Listing />
     </div>
   );
 };

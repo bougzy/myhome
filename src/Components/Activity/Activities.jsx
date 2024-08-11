@@ -10,6 +10,17 @@ import x from "../../assets/x.png"
 import './Activities.css'; 
 import { MdMargin } from 'react-icons/md';
 import Animation from '../Animation';
+import InspectionTable from './InspectionTable';
+import RecentInspectionTable from './RecentInspectionTable';
+
+
+
+
+const inspectionSummary = [
+  { title: "Successful Inspection", count: 321, image: freshtop },
+  { title: "Unsuccessful Inspection", count: 0, image: x },
+  // Add more objects here if needed
+];
 
 export const Dashb = () => {
   return (
@@ -89,89 +100,29 @@ export const Dashb = () => {
    <Animation animationClass="animate__slideInRight" delay={100}>
       <Row>
         <Col xs={12} lg={8}>
-      
           <Row>
-            <Col xs={12} sm={6} md={6} className="mb-4">
-              <Card>
-                <Card.Body>
-                  <Card.Title>
-                  <Row>
-                  <Col xs="auto">
-                    <Image src={freshtop} style={{width:"100px", height:"100px"}}/> 
-                  </Col>
-                  <Col className="mt-4">
-                    <p style={{fontFamily:"SF Pro Display", fontWeight:"700"}}>Successful Inspection</p>
-                    <p style={{fontWeight:"400", fontSize:"28px"}}>321</p>
-                  </Col>
-                </Row>
-                  </Card.Title>
-                  <Card.Text></Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={12} sm={6} md={6} className="mb-4">
-              <Card>
-                <Card.Body>
-                <Card.Title>
+      {inspectionSummary.map((item, index) => (
+        <Col xs={12} sm={6} md={6} className="mb-4" key={index}>
+          <Card>
+            <Card.Body>
+              <Card.Title>
                 <Row>
                   <Col xs="auto">
-                    <Image src={x} style={{width:"100px", height:"100px"}}/> 
+                    <Image src={item.image} style={{ width: "100px", height: "100px" }} />
                   </Col>
                   <Col className="mt-4">
-                    <p style={{fontFamily:"SF Pro Display", fontWeight:"700"}}>Unsuccessful Inspection</p>
-                    <p style={{fontWeight:"400", fontSize:"28px"}}>0</p>
+                    <p style={{ fontFamily: "SF Pro Display", fontWeight: "700" }}>{item.title}</p>
+                    <p style={{ fontWeight: "400", fontSize: "28px" }}>{item.count}</p>
                   </Col>
                 </Row>
-                </Card.Title>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-
-          <h3 className="mt-5">Next Inspection</h3>
-          <div className="table-responsive rounded-4">
-            <Table hover className="bg-white no-borders text-center custom-table">
-              <thead>
-                <tr>
-                  <th scope="col">Dates</th>
-                  <th scope="col">Clients Name</th>
-                  <th scope="col">Property</th>
-                  <th scope="col">Purpose</th>
-                  <th scope="col">Contact</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">01/01</th>
-                  <td>Mr Paul</td>
-                  <td>The panoramo</td>
-                  <td>Buying</td>
-                  <td>08133289824</td>
-                </tr>
-                <tr>
-                  <th scope="row">22/01</th>
-                  <td>Peter</td>
-                  <td>Blake resort</td>
-                  <td>Selling</td>
-                  <td>08133289824</td>
-                </tr>
-                <tr>
-                  <th scope="row">24/01</th>
-                  <td>Miss Abigail</td>
-                  <td>Lekki duplex</td>
-                  <td>Buying</td>
-                  <td>08133289824</td>
-                </tr>
-                <tr>
-                  <th scope="row">31/01</th>
-                  <td>Mr Blake</td>
-                  <td>Living spring</td>
-                  <td>Renting</td>
-                  <td>08133289824</td>
-                </tr>
-              </tbody>
-            </Table>
-          </div>
+              </Card.Title>
+              <Card.Text></Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      ))}
+    </Row>
+          <InspectionTable />
         </Col>
 
         <Col xs={12} lg={4} className="">
@@ -185,71 +136,7 @@ export const Dashb = () => {
     
     
   <Container className="mt-3" style={{marginBottom:"180px"}}>
-  <Animation animationClass="animate__slideInRight" delay={200}>
-      <Row>
-        <Col xs="12" lg="12" className=""> {/* Center the column within the container */}
-          <div className="m-3">
-            <h3 className="mt-5">Recent Inspection</h3> {/* Center the header */}
-          </div>
-          <div className="table-responsive rounded-4">
-            <Table hover className="bg-white no-borders text-center custom-table"> {/* Center table content */}
-              <thead>
-                <tr>
-                  <th scope="col">Date</th>
-                  <th scope="col">Client's Name</th>
-                  <th scope="col">Property</th>
-                  <th scope="col">Purpose</th>
-                  <th scope="col">Contact</th>
-                  <th scope="col">Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                <th scope="row">01/01</th>
-                  <td>Mr Paul</td>
-                  <td>The panoramo</td>
-                  <td>Buying</td>
-                  <td>08133289824</td>
-                  <td style={{color:"#00FF38"}}>Sold</td>
-                </tr>
-                <tr>
-                <th scope="row">01/01</th>
-                  <td>Mr Paul</td>
-                  <td>The panoramo</td>
-                  <td>Buying</td>
-                  <td>08133289824</td>
-                  <td style={{color:"#00FF38"}}>Bought</td>
-                </tr>
-                <tr>
-                <th scope="row">22/01</th>
-                  <td>Peter</td>
-                  <td>Blake resort</td>
-                  <td>Selling</td>
-                  <td>08133289824</td>
-                  <td style={{color:"#61FF00"}}>Bought</td>
-                </tr>
-                <tr>
-                <th scope="row">24/01</th>
-                  <td>Miss Abigail</td>
-                  <td>Lekki duplex</td>
-                  <td>Buying</td>
-                  <td>08133289824</td>
-                  <td style={{color:"#00B2FF"}}>Rented out</td>
-                </tr>
-                <tr>
-                <th scope="row">31/01</th>
-                  <td>Mr Blake</td>
-                  <td>Living spring</td>
-                  <td>Renting</td>
-                  <td>08133289824</td>
-                  <td style={{color:"#00B2FF"}}>Rented out</td>
-                </tr>
-              </tbody>
-            </Table>
-          </div>
-        </Col>
-      </Row>
-      </Animation>
+      <RecentInspectionTable />
     </Container>
 
 

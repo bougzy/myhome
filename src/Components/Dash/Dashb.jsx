@@ -13,8 +13,45 @@ import LineChart from './LineChart';
 import SalesChart from './SalesChart';
 import "./dash.css";
 import Animation from '../Animation';
+import InspectionTable from './InspectionTable';
 
+
+
+
+const cardData = [
+  {
+    imgSrc: trade,
+    amount: '$5k',
+    description: 'Total Sales',
+    percentage: '+10% from yesterday',
+    color: '#FEB95A',
+  },
+  {
+    imgSrc: bag,
+    amount: '50',
+    description: 'Property Bought',
+    percentage: '+8% from yesterday',
+    color: '#A9DFD8',
+  },
+  {
+    imgSrc: coin,
+    amount: '900',
+    description: 'Property Sold',
+    percentage: '+2% from yesterday',
+    color: '#F2C8ED',
+  },
+  {
+    imgSrc: user,
+    amount: '12',
+    description: 'New Views',
+    percentage: '+3% from yesterday',
+    color: '#20AEF3',
+  },
+];
 export const Dashb = () => {
+
+  
+
   return (
     <div>
       
@@ -88,101 +125,25 @@ export const Dashb = () => {
           <Col xs={12} lg={8}>
             <h3>Today's Data</h3>
             <Animation animationClass="animate__slideInRight" delay={200}>
-            <Row>
-              <Col xs={12} sm={6} md={3} className="mb-4">
-                <Card className="border-0 rounded-4">
-                  <Card.Body className="mt-2">
-                    <Image src={trade} className="w-25"/>
-                    <h4 className="mt-2">$5k</h4>
-                    <p>Total Sales</p>
-                    <p className="fs-6" style={{color:"#FEB95A"}}>+10% from yesterday</p>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col xs={12} sm={6} md={3} className="mb-4">
-                <Card className="border-0 rounded-4">
-                  <Card.Body className="mt-2">
-                    <Image src={bag} className="w-25"/>
-                    <h4 className="mt-2">50</h4>
-                    <p>Property Bought</p>
-                    <p className="fs-6" style={{color:"#A9DFD8"}}>+8% from yesterday</p>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col xs={12} sm={6} md={3} className="mb-4">
-                <Card className="border-0 rounded-4">
-                  <Card.Body className="mt-2">
-                    <Image src={coin} className="w-25"/>
-                    <h4 className="mt-2">900</h4>
-                    <p>Property Sold</p>
-                    <p className="fs-6" style={{color:"#F2C8ED"}}>+2% from yesterday</p>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col xs={12} sm={6} md={3} className="mb-4">
-                <Card className="border-0 rounded-4">
-                  <Card.Body className="mt-2">
-                    <Image src={user} className="w-25"/>
-                    <h4 className="mt-2">12</h4>
-                    <p>New Views</p>
-                    <p className="fs-6" style={{color:"#20AEF3"}}>+3% from yesterday</p>
-                  </Card.Body>
-                </Card>
-              </Col>
-            </Row>
+            
+              <Row>
+    {cardData.map((card, index) => (
+      <Col xs={12} sm={6} md={3} className="mb-4" key={index}>
+        <Card className="border-0 rounded-4">
+          <Card.Body className="mt-2">
+            <Image src={card.imgSrc} className="w-25" />
+            <h4 className="mt-2">{card.amount}</h4>
+            <p>{card.description}</p>
+            <p className="fs-6" style={{ color: card.color }}>
+              {card.percentage}
+            </p>
+          </Card.Body>
+        </Card>
+      </Col>
+    ))}
+  </Row>
               </Animation>
-           
-          
-
-            <Animation animationClass="animate__slideInRight" delay={200}>
-            <h3 className="mt-5">Next Inspection</h3>
-            <div className="table-responsive rounded-4">
-              <Table hover className="bg-white no-borders text-center custom-table">
-                <thead>
-                  <tr>
-                    <th scope="col">Dates</th>
-                    <th scope="col">Clients Name</th>
-                    <th scope="col">Property</th>
-                    <th scope="col">Purpose</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">01/01</th>
-                    <td>Mr Paul</td>
-                    <td>The panoramo</td>
-                    <td>
-                      <Button style={{color: "#FCB859", border: "#FCB859 solid 2px", background: "#FCB8591F"}}>Sold</Button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">22/01</th>
-                    <td>Peter</td>
-                    <td>Blake resort</td>
-                    <td>
-                      <Button style={{color: "#A9DFD8", border: "#A9DFD8 solid 2px", background: "#A9DFD81F"}}>Approved</Button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">24/01</th>
-                    <td>Miss Abigail</td>
-                    <td>Lekki duplex</td>
-                    <td>
-                      <Button style={{color: "#0075FF", border: "#0075FF solid 2px", background: "#A9DFD81F"}}>Bought</Button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">24/01</th>
-                    <td>Miss Abigail</td>
-                    <td>Lekki duplex</td>
-                    <td>
-                      <Button style={{color: "#A9DFD8", border: "#A9DFD8 solid 2px", background: "#A9DFD81F"}}>Approved</Button>
-                    </td>
-                  </tr>
-                </tbody>
-              </Table>
-            </div>
-            </Animation>
+            <InspectionTable />
           </Col>
               
           <Col xs={12} lg={4} className="mt-4">
