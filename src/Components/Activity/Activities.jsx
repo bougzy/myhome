@@ -77,7 +77,7 @@ export const Dashb = () => {
       <div className="">
       <Row>
                   <Col>
-                    <h1 style={{width:"0px", fontSize:"400%", height:"0px"}}>01</h1> {/* Replace FaIconName with the actual icon name, e.g., FaUser */}
+                    <h1 style={{width:"0px", fontSize:"400%", height:"0px"}}>01</h1> 
                   </Col>
                   <Col className="mt-3">
                     <p className="">JANUARY <span className="me-4">2021</span></p>
